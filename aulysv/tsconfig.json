@@ -10,12 +10,12 @@
 		"sourceMap": true,
 		"strict": true,
 		"moduleResolution": "bundler",
-		"baseUrl": ".",
-		"paths": {
-			"@/*": [
-				"./src/*"
-			]
-		}
+		// "baseUrl": ".",
+		// "paths": {
+		// 	"@/*": [
+		// 		"./src/*"
+		// 	]
+		// }
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//
