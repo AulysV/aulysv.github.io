@@ -56,5 +56,4 @@
     <a class="btn">Button</a>
   </div>
 </div>
-
 <slot />
