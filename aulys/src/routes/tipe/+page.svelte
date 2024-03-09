@@ -1,3 +1,7 @@
+<script>
+  import img from "$lib/images/aulys.png";
+</script>
+
 <div class="min-h-svh">
   <h1 class="text-5xl font-bold mt-32 text-center">Tipe</h1>
 
@@ -61,11 +65,11 @@
   }
 
   #image1 {
-    background-image: url("src/images/redstone.png");
+    background-image: url("$lib/images/redstone1.png");
   }
 
   #image2 {
-    background-image: url("src/images/redstone2.png");
+    background-image: url("$lib/images/redstone2.png");
   }
 
   #blur1,
