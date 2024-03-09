@@ -6,7 +6,7 @@
   <div class="h-svh">
     <div class="hero min-h-screen">
       <div class="hero-content flex-col lg:flex-row">
-        <img src="src/images/aulys.png" class="max-w-xs mx-20" />
+        <img src="$lib/images/aulys.png" class="max-w-xs mx-20" />
         <div>
           <h1 class="text-5xl font-bold">Bonjour !</h1>
           <p class="py-6">
