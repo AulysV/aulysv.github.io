@@ -12,10 +12,14 @@
 
   beforeNavigate(() => (isLoading = true));
   afterNavigate(() => (isLoading = false));
+
 </script>
 
 {#if isLoading}
-  <span class="loading loading-ring loading-md"></span>
+  <div class="fixed top-0 left-0 w-svw h-screen z-[9999] flex bg-base-300">
+    <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
+    ></span>
+  </div>
 {/if}
 
 <div id="navbarmain" class="navbar bg-base-300 rounded-md">
