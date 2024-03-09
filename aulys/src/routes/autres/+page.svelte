@@ -1,3 +1,7 @@
+<script>
+  import img from "$lib/images/yellowstone.png";
+</script>
+
 <div class="min-h-svh">
   <h1 class="text-5xl font-bold mt-32 text-center">Fourre-tout</h1>
 
@@ -154,7 +158,7 @@
   }
 
   #image2 {
-    background-image: url("src/images/yellowstone.png");
+    background-image: url("$lib/images/yellowstone.png");
   }
 
   #blur1,
