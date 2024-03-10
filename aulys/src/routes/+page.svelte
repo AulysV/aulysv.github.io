@@ -4,23 +4,21 @@
 </script>
 
 <main>
-  <div class="h-svh">
-    <div class="hero min-h-screen">
-      <div class="hero-content flex-col lg:flex-row">
-        <img src={aulys} class="max-w-xs mx-20" />
-        <div>
-          <h1 class="text-5xl font-bold">Bonjour !</h1>
-          <p class="py-6">
-            Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de
-            physique.
-          </p>
+  <div class="h-svh hero min-h-screen">
+    <div class="hero-content flex-col lg:flex-row">
+      <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
+      <div>
+        <h1 class="text-5xl font-bold">Bonjour !</h1>
+        <p class="py-6">
+          Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de
+          physique.
+        </p>
 
-          <a href="/tipe"
-            ><button class="btn btn-primary">
-              <i class="fa-solid fa-microscope mr-3 text-ba"></i>Tipe</button
-            >
-          </a>
-        </div>
+        <a href="/tipe"
+          ><button class="btn btn-primary">
+            <i class="fa-solid fa-microscope mr-3 text-ba"></i>Tipe</button
+          >
+        </a>
       </div>
     </div>
   </div>

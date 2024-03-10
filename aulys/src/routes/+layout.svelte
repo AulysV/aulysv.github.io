@@ -12,7 +12,6 @@
 
   beforeNavigate(() => (isLoading = true));
   afterNavigate(() => (isLoading = false));
-
 </script>
 
 {#if isLoading}
@@ -22,7 +21,7 @@
   </div>
 {/if}
 
-<div id="navbarmain" class="navbar bg-base-300 rounded-md">
+<div id="navbarmain" class="navbar rounded-md bg-base-300">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -125,7 +124,7 @@
   <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     <a
       href="https://github.com/AulysV"
-      class="link text-2xl"
+      class="link text-2xl underline hover:text-primary mx-2"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -133,7 +132,7 @@
     >
     <a
       href="https://discord.com/users/637695900382134303"
-      class="link text-2xl"
+      class="link underline hover:text-primary text-2xl mx-2"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -165,5 +164,8 @@ footer {
   footer {
     display: flex;
     justify-content: space-between;
+  }
+  .backdrop-blur {
+    --backdrop-blur-color: #0000ff;
   }
 </style>

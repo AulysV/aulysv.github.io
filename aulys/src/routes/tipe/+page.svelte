@@ -60,8 +60,15 @@
     background-position: center;
     margin-bottom: 2em;
     margin-top: 2em;
-    margin-left: 5em;
-    margin-right: 5em;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+
+  @media (max-width: 600px) {
+    #image2 {
+      background-size: 100svw;
+      background-attachment: scroll;
+    }
   }
 
   #image1 {
