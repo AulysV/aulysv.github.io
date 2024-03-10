@@ -3,26 +3,26 @@
   import aulys from "$lib/images/aulys.png";
 </script>
 
-<main>
-  <div class="h-svh hero min-h-screen">
-    <div class="hero-content flex-col lg:flex-row">
-      <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
-      <div>
-        <h1 class="text-5xl font-bold">Bonjour !</h1>
-        <p class="py-6">
-          Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de
-          physique.
-        </p>
+<div class="hero h-svh bg-base-200">
+  <div
+    class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
+  >
+    <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
 
-        <a href="/tipe"
-          ><button class="btn btn-primary">
-            <i class="fa-solid fa-microscope mr-3 text-ba"></i>Tipe</button
-          >
-        </a>
-      </div>
+    <div>
+      <h1 class="text-5xl font-bold">Bonjour !</h1>
+      <p class="py-6">
+        Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de physique.
+      </p>
+
+      <a href="/tipe"
+        ><button class="btn btn-primary">
+          <i class="fa-solid fa-microscope mr-3 text-ba"></i>Tipe</button
+        >
+      </a>
     </div>
   </div>
-</main>
+</div>
 
 <!-- <style>
 #landing {

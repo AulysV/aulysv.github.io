@@ -66,8 +66,7 @@
 
   @media (max-width: 600px) {
     #image2 {
-      background-size: 100svw;
-      background-attachment: scroll;
+      display: none;
     }
   }
 
