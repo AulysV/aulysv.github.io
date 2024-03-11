@@ -71,11 +71,11 @@
   }
 
   #image1 {
-    background-image: url("$lib/images/redstone1.png");
+    background-image: url("$lib/images/ss/ssmc3.png");
   }
 
   #image2 {
-    background-image: url("$lib/images/redstone2.png");
+    background-image: url("$lib/images/ss/ssmc2.png");
   }
 
   #blur1,

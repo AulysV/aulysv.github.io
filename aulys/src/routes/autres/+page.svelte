@@ -181,7 +181,7 @@
   }
 
   #image2 {
-    background-image: url("$lib/images/yellowstone.png");
+    background-image: url("$lib/images/ss/ssmc6.png");
   }
 
   @media (max-width: 600px) {

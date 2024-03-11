@@ -3,7 +3,7 @@
   import aulys from "$lib/images/aulys.png";
 </script>
 
-<div class="hero h-svh bg-base-200">
+<div class="hero h-svh">
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
