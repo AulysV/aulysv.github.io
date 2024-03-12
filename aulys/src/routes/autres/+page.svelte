@@ -25,13 +25,17 @@
 <div class="min-h-svh">
   <h1 class="text-5xl font-bold mt-32 text-center">Fourre-tout</h1>
 
+  <div class="divider mx-10">
+    <i class="fa-solid fa-minus text-3xl text-primary"></i>
+  </div>
+
   <!-- <div id="image1" class="rounded-lg h-64" data-theme="dark">
     <div id="blur1" class="rounded-lg"></div>
   </div> -->
 
-  <div id="image2" class="rounded h-64" data-theme="light">
+  <!-- <div id="image2" class="rounded h-64" data-theme="light">
     <div id="blur2" class="rounded"></div>
-  </div>
+  </div> -->
 
   <div id="maindiv" class="text-xl">
     <p class="text-2xl font-bold my-5">
@@ -170,7 +174,7 @@
 </div>
 
 <style>
-  #image2 {
+  /* #image2 {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -192,16 +196,17 @@
 
   #blur1,
   #blur2 {
-    /* backdrop-filter: blur(7px); */
     background: rgba(0, 0, 0, 0);
     height: 100%;
     width: auto;
-  }
+  } */
 
   #maindiv {
     display: flex;
     flex-direction: column;
-    margin: 5vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 3em;
   }
 
   @media (min-width: 1024px) {

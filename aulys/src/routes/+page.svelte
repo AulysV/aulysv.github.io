@@ -1,6 +1,15 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import aulys from "$lib/images/aulys.png";
+
+  let greeting = "Bonjour";
+
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
+
+  if (currentHour >= 18 || currentHour < 6) {
+    greeting = "Bonsoir";
+  }
 </script>
 
 <div class="hero h-svh">
@@ -10,7 +19,7 @@
     <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
 
     <div>
-      <h1 class="text-5xl font-bold">Bonjour !</h1>
+      <h1 class="text-5xl font-bold">{greeting} !</h1>
       <p class="py-6">
         Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de physique.
       </p>

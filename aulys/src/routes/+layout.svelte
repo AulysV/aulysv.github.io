@@ -15,9 +15,12 @@
 </script>
 
 {#if isLoading}
-  <div class="fixed top-0 left-0 w-svw h-screen z-[9999] flex bg-base-300">
+  <div
+    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-300"
+  >
     <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
     ></span>
+    <p class="text-primary text-xl mt-10 ml-auto mr-auto">Chargementation...</p>
   </div>
 {/if}
 
@@ -45,11 +48,10 @@
       >
         <li><a href="/tipe">Tipe</a></li>
 
-        <li><a href="/autres">Autres</a></li>
         <li>
-          <a>Parent</a>
+          <a>Autres</a>
           <ul class="p-2">
-            <li><a>Submenu 1</a></li>
+            <li><a href="/autres">Projets</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </li>
@@ -61,12 +63,11 @@
     <ul class="menu menu-horizontal px-1">
       <li><a href="/tipe">Tipe</a></li>
 
-      <li><a href="/autres">Autres</a></li>
       <li>
         <details>
-          <summary>Parent</summary>
+          <summary>Autres</summary>
           <ul class="p-2">
-            <li><a>Submenu 1</a></li>
+            <li><a href="/autres">Projets</a></li>
             <li><a>Submenu 2</a></li>
           </ul>
         </details>
