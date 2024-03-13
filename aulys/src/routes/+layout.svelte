@@ -12,6 +12,16 @@
 
   beforeNavigate(() => (isLoading = true));
   afterNavigate(() => (isLoading = false));
+
+  import { afterUpdate } from "svelte";
+
+  let showMessage = false;
+
+  afterUpdate(() => {
+    setTimeout(() => {
+      showMessage = true;
+    }, 5000);
+  });
 </script>
 
 {#if isLoading}
@@ -21,6 +31,8 @@
     <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
     ></span>
     <p class="text-primary text-xl mt-10 ml-auto mr-auto">Chargementation...</p>
+
+    <p class="mt-10 ml-auto mr-auto">(Recharger la page si necessaire)</p>
   </div>
 {/if}
 
@@ -52,7 +64,7 @@
           <a>Autres</a>
           <ul class="p-2">
             <li><a href="/autres">Projets</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a href="/autres/countdown">Concours</a></li>
           </ul>
         </li>
       </ul>
@@ -68,7 +80,7 @@
           <summary>Autres</summary>
           <ul class="p-2">
             <li><a href="/autres">Projets</a></li>
-            <li><a>Submenu 2</a></li>
+            <li><a href="/autres/countdown">Concours</a></li>
           </ul>
         </details>
       </li>

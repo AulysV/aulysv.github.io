@@ -1,21 +1,9 @@
 <script src="https://www.jsdelivr.com/package/npm/pdfjs-dist">
-  import { onMount } from "svelte";
-
   import dpmc from "$lib/dpmc.pdf";
   import algarve from "$lib/bazar.pdf";
   import utk from "$lib/utk.pdf";
 
   import xx from "$lib/tipe.pdf";
-
-  // import markdownit from "markdown-it";
-  // let markdownContent = "";
-
-  // onMount(async () => {
-  //   const response = await fetch("$lib/tipe.md");
-  //   const markdownText = await response.text();
-  //   const md = new markdownit();
-  //   markdownContent = md.render(markdownText);
-  // });
 </script>
 
 <div class="min-h-svh p-0">
@@ -201,7 +189,6 @@
       </div>
     </div>
   </article>
-
   <!-- <div>
     {@html $markdownContent}
   </div> -->
