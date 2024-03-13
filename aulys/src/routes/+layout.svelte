@@ -59,14 +59,15 @@
         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
       >
         <li><a href="/tipe">Tipe</a></li>
+        <li><a href="/autres/countdown">Concours</a></li>
 
-        <li>
+        <!-- <li>
           <a>Autres</a>
           <ul class="p-2">
             <li><a href="/autres">Projets</a></li>
             <li><a href="/autres/countdown">Concours</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </div>
     <a class="btn btn-ghost text-xl" href="/">Accueil</a>
@@ -74,7 +75,8 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/tipe">Tipe</a></li>
-
+      <li><a href="/autres/countdown">Concours</a></li>
+      <!-- 
       <li>
         <details>
           <summary>Autres</summary>
@@ -83,7 +85,7 @@
             <li><a href="/autres/countdown">Concours</a></li>
           </ul>
         </details>
-      </li>
+      </li> -->
     </ul>
   </div>
   <div class="navbar-end">

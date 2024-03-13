@@ -24,13 +24,10 @@
 
   let countdown = calculateRemainingTime();
 
-  // Function to update the countdown display
-  function updateCountdown() {
-    countdown = calculateRemainingTime();
-  }
-
   // Update the countdown every second
-  const interval = setInterval(updateCountdown, 1000);
+  const interval = setInterval(() => {
+    countdown = calculateRemainingTime();
+  }, 1000);
 
   onMount(() => {
     // Clear the interval when the component is destroyed
