@@ -22,7 +22,7 @@
   import utk from "$lib/utk.pdf";
 </script>
 
-<div class="min-h-svh">
+<div class="min-h-svh p-0">
   <h1 class="text-5xl font-bold mt-32 text-center">Tipe</h1>
 
   <div class="divider mx-10">
@@ -37,23 +37,23 @@
     <div id="blur2" class="rounded"></div>
   </div> -->
 
-  <div id="maindiv" class="text-xl my-16 flex flex-col mx-5">
-    <p class="text-2xl font-bold my-5">
+  <article id="maindiv" class="prose max-w-none lg:text-xl">
+    <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Concept
       général à développer :
-    </p>
+    </h3>
     <p>
       Résoudre des équations (mécaniques ou mathématiques) complexe en mesurant
       la sortie d'un circuit électrique régi par une équation semblable.
     </p>
 
-    <p class="text-2xl font-bold my-5">
+    <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
       ></i>Bibliographie :
-    </p>
+    </h3>
 
     <div class="overflow-x-auto">
-      <table class="table">
+      <table class="table-xs md:table-md lg:table-lg table-zebra">
         <!-- head -->
         <thead>
           <tr>
@@ -153,11 +153,11 @@
       </table>
     </div>
 
-    <p class="text-2xl font-bold my-5">
+    <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Idées et
       apport personnel:
-    </p>
-    <ul class="list-decimal ml-5">
+    </h3>
+    <ul class="list-decimal">
       <li>
         Concevoir un système physique <span class="text-accent"
           >(trouver une problématique ici)</span
@@ -181,60 +181,11 @@
         meilleure précision liées aux erreurs.
       </li>
     </ul>
-  </div>
+  </article>
 </div>
 
 <style>
-  /* #image1,
-  #image2 {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 2em;
-    margin-top: 2em;
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-
-  @media (max-width: 600px) {
-    #image2 {
-      display: none;
-    }
-  }
-
-  #image1 {
-    background-image: url("$lib/images/ss/ssmc3.png");
-  }
-
-  #image2 {
-    background-image: url("$lib/images/ss/ssmc2.png");
-  }
-
-  #blur1,
-  #blur2 {
-    background: rgba(0, 0, 0, 0);
-    height: 100%;
-    width: auto;
-  } 
-  */
-  /* 
   #maindiv {
-    display: flex;
-    flex-direction: column;
-    margin-left: calc(5vw + 300px);
-    margin-right: 5vw;
-    margin-top: 3em;
-  } */
-
-  #maindiv > ul > li {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  @media (min-width: 1024px) {
-    #maindiv {
-      margin-left: 15vw;
-      margin-right: 15vw;
-    }
+    margin: 0 10%;
   }
 </style>
