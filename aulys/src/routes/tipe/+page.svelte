@@ -17,9 +17,21 @@
   //   }
   // });
 
+  import { onMount } from "svelte";
+
   import dpmc from "$lib/dpmc.pdf";
   import algarve from "$lib/bazar.pdf";
   import utk from "$lib/utk.pdf";
+
+  // import markdownit from "markdown-it";
+  // let markdownContent = "";
+
+  // onMount(async () => {
+  //   const response = await fetch("$lib/tipe.md");
+  //   const markdownText = await response.text();
+  //   const md = new markdownit();
+  //   markdownContent = md.render(markdownText);
+  // });
 </script>
 
 <div class="min-h-svh p-0">
@@ -182,6 +194,10 @@
       </li>
     </ul>
   </article>
+
+  <!-- <div>
+    {@html $markdownContent}
+  </div> -->
 </div>
 
 <style>
