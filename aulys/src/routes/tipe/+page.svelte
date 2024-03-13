@@ -1,27 +1,11 @@
-<script>
-  // import img from "$lib/images/aulys.png";
-  // import gsap from "gsap";
-
-  // import { onMount } from "svelte";
-  // onMount(() => {
-  //   if (window.innerWidth > 768) {
-  //     gsap.to("#maindiv", {
-  //       scrollTrigger: {
-  //         trigger: "#maindiv",
-  //         start: "top 80%",
-  //         end: "bottom 20%",
-  //         scrub: 1,
-  //       },
-  //       x: -300,
-  //     });
-  //   }
-  // });
-
+<script src="https://www.jsdelivr.com/package/npm/pdfjs-dist">
   import { onMount } from "svelte";
 
   import dpmc from "$lib/dpmc.pdf";
   import algarve from "$lib/bazar.pdf";
   import utk from "$lib/utk.pdf";
+
+  import xx from "$lib/tipe.pdf";
 
   // import markdownit from "markdown-it";
   // let markdownContent = "";
@@ -193,6 +177,29 @@
         meilleure précision liées aux erreurs.
       </li>
     </ul>
+
+    <h3>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Dernier
+      rendu PDF :
+    </h3>
+
+    <div class="collapse bg-base-200">
+      <input type="checkbox" />
+      <div class="collapse-title text-xl font-medium">15 mars 2024</div>
+      <div class="collapse-content">
+        <object data={xx} type="application/pdf" width="100%" height="600px">
+          <p>
+            Malheuresement, le PDF viewer n'est pas dispo sur votre grille-pain.
+            Veuillez télécharger le PDF : <a
+              href={xx}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-primary">Download PDF</a
+            >
+          </p>
+        </object>
+      </div>
+    </div>
   </article>
 
   <!-- <div>
