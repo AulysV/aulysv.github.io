@@ -37,10 +37,8 @@
   });
 </script>
 
-<div class="min-h-svh p-0">
-  <h1 class="text-5xl font-bold mt-32 text-center">
-    Temps avant les concours des 2e années
-  </h1>
+<div class="min-h-svh p-0 prose max-w-none">
+  <h1 class="text-5xl font-bold mt-32 text-center">Concours</h1>
 
   <div class="divider mx-10">
     <i class="fa-solid fa-minus text-3xl text-primary"></i>

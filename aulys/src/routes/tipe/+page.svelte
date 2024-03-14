@@ -2,6 +2,7 @@
   import dpmc from "$lib/dpmc.pdf";
   import algarve from "$lib/bazar.pdf";
   import utk from "$lib/utk.pdf";
+  import mit from "$lib/mit.pdf";
 
   import xx from "$lib/tipe.pdf";
 </script>
@@ -27,8 +28,8 @@
       général à développer :
     </h3>
     <p>
-      Résoudre des équations (mécaniques ou mathématiques) complexe en mesurant
-      la sortie d'un circuit électrique régi par une équation semblable.
+      Résoudre des équations complexes (au sens de non triviales) en mesurant la
+      sortie d'un circuit électrique régi par une équation semblable.
     </p>
 
     <h3>
@@ -42,6 +43,7 @@
         <thead>
           <tr>
             <th></th>
+            <th>Classification</th>
             <th>Source</th>
             <th>Contenu et utilité</th>
             <th>Lien(s)</th>
@@ -51,8 +53,15 @@
           <!-- row 1 -->
           <tr>
             <th>1</th>
+            <td>
+              <div class="badge text-teal-500">Culture</div>
+            </td>
             <td>Wikipedia</td>
-            <td>Contexte historique et idées pas ou peu scientifiques</td>
+            <td
+              >Contexte historique et idées pas ou peu scientifiques. Permettra
+              d'agrandir la bibliographie et d'avoir une vue d'ensemble du
+              sujet.</td
+            >
             <td
               ><a
                 href="https://en.wikipedia.org/wiki/Analog_computer"
@@ -82,12 +91,16 @@
             </td>
           </tr>
           <!-- row 2 -->
-          <tr class="hover">
+          <tr>
             <th>2</th>
+            <td>
+              <div class="badge text-green-500">Abordable</div>
+            </td>
             <td>DPMC Genève</td>
             <td
               >Article un peu plus scientifiquement poussé, abordable mais
               comportant des notions non vues en classes (dont des ALI).
+              Peut-être un peu spécifique.
             </td>
             <td
               ><a
@@ -101,6 +114,10 @@
           <!-- row 3 -->
           <tr>
             <th>3</th>
+            <td>
+              <div class="badge text-orange-500">Poussé</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td>
             <td>Univ. d'Algarve</td>
             <td
               >Document comportant une partie mathématique plus poussée sur le
@@ -119,11 +136,16 @@
           <!-- row 4 -->
           <tr>
             <th>4</th>
+            <td>
+              <div class="badge text-orange-500">Poussé</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td>
             <td>Univ. of Tennessee</td>
             <td
               >Article très vaste et général sur l'informatique analogique, fait
-              intervenir des notions mathématiques abordables, mais ne développe
-              pas tellement ce côté.
+              intervenir des notions mathématiques abordables. Permettra surtout
+              de trouver d'autres sources, car possède une bibliographie
+              complète.
             </td><td>
               <a
                 href={utk}
@@ -133,7 +155,72 @@
               >
             </td>
           </tr>
-        </tbody>
+
+          <tr class="hover">
+            <th>5</th>
+            <td>
+              <div class="badge text-teal-500">Culture</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td>
+            <td> Note de G. Coriolis</td>
+            <td
+              >Petit paragraphe de Coriolis (de la 5e à la 9e page) sur le
+              traçage de courbe d'équations différentielles de manière physique.
+              Ne va pas servir explicitement.</td
+            >
+            <td
+              ><a
+                href={dpmc}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">PDF</a
+              ></td
+            >
+          </tr>
+
+          <tr>
+            <th>6</th>
+            <td>
+              <div class="badge text-green-500">Abordable</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td>
+            <td>interstices.info</td>
+            <td
+              >Article assez complet sur les calculateurs analogiques. Développe
+              beaucoup le côté historique, comme beaucoup d'autres documents à
+              ce sujet, mais aborde tout de même des notions plus scientifiques
+              et concrètes.
+            </td>
+            <td
+              ><a
+                href="https://interstices.info/les-calculateurs-analogiques/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">PDF</a
+              ></td
+            >
+          </tr>
+
+          <tr>
+            <th>7</th>
+            <td>
+              <div class="badge text-pink-500">À étudier</div>
+            </td>
+            <td>MIT</td>
+            <td
+              >Document paraissant assez intéressant physiquement que je n'ai
+              pas eu le temps d'étudier...
+            </td>
+            <td
+              ><a
+                href={mit}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">Article</a
+              ></td
+            >
+          </tr></tbody
+        >
       </table>
     </div>
 
@@ -166,6 +253,22 @@
       </li>
     </ul>
 
+    <h4>Contraintes problématique :</h4>
+    <p>
+      Le système physque devrait répondre à des besoins particuliers, ce qui
+      permettra de donner un fil conducteur à la partie « Apport personnel » (et
+      éventuellement relier l'idée du projet au thème imposé ?).
+      <br />
+      Exemples :
+    </p>
+    <ul>
+      <li>
+        Masse-ressorts dopés (entrée non sinusoïdale/périodique), ou
+        amortissement différents (milieu aquatique, ...) ?
+      </li>
+      <li>(pas trop d'idées actuellement)</li>
+    </ul>
+
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Dernier
       rendu PDF :
@@ -173,7 +276,7 @@
 
     <div class="collapse bg-base-200">
       <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">15 mars 2024</div>
+      <div class="collapse-title text-xl font-medium">13 mars 2024</div>
       <div class="collapse-content">
         <object data={xx} type="application/pdf" width="100%" height="600px">
           <p>
@@ -182,7 +285,7 @@
               href={xx}
               target="_blank"
               rel="noopener noreferrer"
-              class="link-primary">Download PDF</a
+              class="link-primary">Télécharger le PDF</a
             >
           </p>
         </object>
