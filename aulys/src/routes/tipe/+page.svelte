@@ -38,7 +38,7 @@
     </h3>
 
     <div class="overflow-x-auto">
-      <table class="table-xs md:table-md lg:table-lg table-zebra">
+      <table class="table-xs md:table-md lg:table-lg">
         <!-- head -->
         <thead>
           <tr>
@@ -156,7 +156,7 @@
             </td>
           </tr>
 
-          <tr class="hover">
+          <tr>
             <th>5</th>
             <td>
               <div class="badge text-teal-500">Culture</div>

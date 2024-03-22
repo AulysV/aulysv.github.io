@@ -26,7 +26,7 @@
 
 {#if isLoading}
   <div
-    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-300"
+    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-200"
   >
     <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
     ></span>
@@ -36,7 +36,7 @@
   </div>
 {/if}
 
-<div id="navbarmain" class="navbar rounded-md bg-base-300">
+<div id="navbarmain" class="navbar rounded-md bg-base-200">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -132,7 +132,7 @@
   </div>
 {/key}
 
-<footer class="items-center p-4 bg-base-300 rounded m-5">
+<footer class="items-center p-4 bg-base-200 rounded m-5">
   <aside class="items-center grid-flow-col">
     <p>Aulys − 2024</p>
   </aside>
@@ -168,7 +168,6 @@ footer {
 
 <style>
   #navbarmain {
-    /* padding: 1.4em 2em; */
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
