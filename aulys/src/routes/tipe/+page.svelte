@@ -274,6 +274,13 @@
       <li>(pas trop d'idées actuellement)</li>
     </ul>
 
+    <h4>Sur les erreurs :</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid
+      quisquam perferendis incidunt alias? Nobis eius voluptatibus autem amet
+      ullam sit aperiam numquam ea nam!
+    </p>
+
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Dernier
       rendu PDF :

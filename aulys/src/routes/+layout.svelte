@@ -36,7 +36,10 @@
   </div>
 {/if}
 
-<div id="navbarmain" class="navbar rounded-md bg-base-200">
+<div
+  id="navbarmain"
+  class="items-center p-2 bg-base-200 rounded m-5 flex justify-between"
+>
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -59,7 +62,7 @@
         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
       >
         <li><a href="/tipe">Tipe</a></li>
-        <li><a href="/autres/countdown">Concours</a></li>
+        <!-- <li><a href="/autres/countdown">Concours</a></li> -->
 
         <!-- <li>
           <a>Autres</a>
@@ -75,7 +78,7 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><a href="/tipe">Tipe</a></li>
-      <li><a href="/autres/countdown">Concours</a></li>
+      <!-- <li><a href="/autres/countdown">Concours</a></li> -->
       <!-- 
       <li>
         <details>
@@ -89,7 +92,7 @@
     </ul>
   </div>
   <div class="navbar-end">
-    <label class="flex cursor-pointer gap-2">
+    <!-- <label class="flex cursor-pointer gap-2">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"
@@ -122,7 +125,7 @@
           d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
         /></svg
       >
-    </label>
+    </label> -->
   </div>
 </div>
 
@@ -167,14 +170,6 @@ footer {
 </style> -->
 
 <style>
-  #navbarmain {
-    left: 50%;
-    transform: translateX(-50%);
-    position: fixed;
-    width: 98vw;
-    top: calc((100vw - 98vw) / 2);
-    z-index: 1;
-  }
   footer {
     display: flex;
     justify-content: space-between;
