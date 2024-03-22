@@ -3,8 +3,9 @@
   import algarve from "$lib/bazar.pdf";
   import utk from "$lib/utk.pdf";
   import mit from "$lib/mit.pdf";
-
+  import corio from "$lib/corio.pdf";
   import xx from "$lib/tipe.pdf";
+  import coriocomplet from "$lib/coriocomplet.pdf";
 </script>
 
 <div class="min-h-svh p-0">
@@ -28,8 +29,8 @@
       général à développer :
     </h3>
     <p>
-      Résoudre des équations complexes (au sens de non triviales) en mesurant la
-      sortie d'un circuit électrique régi par une équation semblable.
+      Résoudre des équations différentielles compliquées en mesurant la sortie
+      d'un circuit électrique régi par cette équation.
     </p>
 
     <h3>
@@ -43,7 +44,7 @@
         <thead>
           <tr>
             <th></th>
-            <th>Classification</th>
+            <!-- <th>Classification</th> -->
             <th>Source</th>
             <th>Contenu et utilité</th>
             <th>Lien(s)</th>
@@ -53,9 +54,9 @@
           <!-- row 1 -->
           <tr>
             <th>1</th>
-            <td>
+            <!-- <td>
               <div class="badge text-teal-500">Culture</div>
-            </td>
+            </td> -->
             <td>Wikipedia</td>
             <td
               >Contexte historique et idées pas ou peu scientifiques. Permettra
@@ -93,9 +94,9 @@
           <!-- row 2 -->
           <tr>
             <th>2</th>
-            <td>
+            <!-- <td>
               <div class="badge text-green-500">Abordable</div>
-            </td>
+            </td> -->
             <td>DPMC Genève</td>
             <td
               >Article un peu plus scientifiquement poussé, abordable mais
@@ -114,10 +115,10 @@
           <!-- row 3 -->
           <tr>
             <th>3</th>
-            <td>
+            <!-- <td>
               <div class="badge text-orange-500">Poussé</div>
               <div class="badge text-pink-500">À étudier</div>
-            </td>
+            </td> -->
             <td>Univ. d'Algarve</td>
             <td
               >Document comportant une partie mathématique plus poussée sur le
@@ -136,10 +137,10 @@
           <!-- row 4 -->
           <tr>
             <th>4</th>
-            <td>
+            <!-- <td>
               <div class="badge text-orange-500">Poussé</div>
               <div class="badge text-pink-500">À étudier</div>
-            </td>
+            </td> -->
             <td>Univ. of Tennessee</td>
             <td
               >Article très vaste et général sur l'informatique analogique, fait
@@ -158,32 +159,37 @@
 
           <tr>
             <th>5</th>
-            <td>
+            <!-- <td>
               <div class="badge text-teal-500">Culture</div>
               <div class="badge text-pink-500">À étudier</div>
-            </td>
+            </td> -->
             <td> Note de G. Coriolis</td>
             <td
               >Petit paragraphe de Coriolis (de la 5e à la 9e page) sur le
-              traçage de courbe d'équations différentielles de manière physique.
-              Ne va pas servir explicitement.</td
+              traçage de courbe d'équations différentielles de manière physique.</td
             >
             <td
               ><a
-                href={dpmc}
+                href={corio}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="link-primary">PDF</a
+              > <br />
+              <a
+                href={coriocomplet}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">PDF (complet)</a
               ></td
             >
           </tr>
 
           <tr>
             <th>6</th>
-            <td>
+            <!-- <td>
               <div class="badge text-green-500">Abordable</div>
               <div class="badge text-pink-500">À étudier</div>
-            </td>
+            </td> -->
             <td>interstices.info</td>
             <td
               >Article assez complet sur les calculateurs analogiques. Développe
@@ -203,9 +209,9 @@
 
           <tr>
             <th>7</th>
-            <td>
+            <!-- <td>
               <div class="badge text-pink-500">À étudier</div>
-            </td>
+            </td> -->
             <td>MIT</td>
             <td
               >Document paraissant assez intéressant physiquement que je n'ai
@@ -230,10 +236,9 @@
     </h3>
     <ul class="list-decimal">
       <li>
-        Concevoir un système physique <span class="text-accent"
-          >(trouver une problématique ici)</span
-        > donc l'équation différentielle est connue et irrésolvable à la main : équation
-        différentielle d'ordre 3 ou plus, non linéaire, ...
+        Concevoir un système physique<span class="text-accent">*</span> donc l'équation
+        différentielle est connue et irrésolvable à la main : équation différentielle
+        d'ordre 3 ou plus, non linéaire, ...
       </li>
       <li>
         Créer un système électrique dont l'équation différentielle est la même
@@ -253,7 +258,7 @@
       </li>
     </ul>
 
-    <h4>Contraintes problématique :</h4>
+    <h4><span class="text-accent">*</span>Contraintes problématique :</h4>
     <p>
       Le système physque devrait répondre à des besoins particuliers, ce qui
       permettra de donner un fil conducteur à la partie « Apport personnel » (et
