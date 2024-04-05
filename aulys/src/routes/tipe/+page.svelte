@@ -276,12 +276,13 @@
 
     <h4>Sur les erreurs :</h4>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquid
-      quisquam perferendis incidunt alias? Nobis eius voluptatibus autem amet
-      ullam sit aperiam numquam ea nam!
+      Étudier la propagation des erreurs dans le modèle, et comment elles se
+      répercutent sur la prédiction du comportement du système physique :
+      comment se comporte réellement un condensateur/une bobine, en contraste
+      avec le dipôle idéal ?
     </p>
 
-    <h3>
+    <!-- <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Dernier
       rendu PDF :
     </h3>
@@ -303,7 +304,7 @@
           </p>
         </object>
       </div>
-    </div>
+    </div> -->
   </article>
   <!-- <div>
     {@html $markdownContent}
