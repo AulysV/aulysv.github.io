@@ -292,8 +292,9 @@
       <div class="collapse-content">
         <object data={xx} type="application/pdf" width="100%" height="600px">
           <p>
-            Malheuresement, le PDF viewer n'est pas dispo sur votre grille-pain.
-            Veuillez télécharger le PDF : <a
+            Malheuresement, le PDF viewer n'est pas dispo sur votre
+            appareil/navigateur. Testé sous Firefox. Veuillez télécharger le PDF
+            : <a
               href={xx}
               target="_blank"
               rel="noopener noreferrer"
