@@ -279,7 +279,7 @@
       Étudier la propagation des erreurs dans le modèle, et comment elles se
       répercutent sur la prédiction du comportement du système physique :
       comment se comporte réellement un condensateur/une bobine, en contraste
-      avec le dipôle idéal ?
+      avec le dipôle idéal ? <span class="text-accent">À développer</span>
     </p>
 
     <!-- <h3>
