@@ -21,7 +21,8 @@
     <div>
       <h1 class="text-5xl font-bold">{greeting} !</h1>
       <p class="py-6">
-        Bienvenue sur le site d'Aulys, codé à l'arrache après un DS de physique.
+        Bienvenue sur le site d'Aulys VINAY, codé à l'arrache après un DS de
+        physique.
       </p>
 
       <a href="/tipe"

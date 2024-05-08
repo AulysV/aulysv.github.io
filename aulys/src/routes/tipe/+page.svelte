@@ -34,6 +34,10 @@
       Résoudre des équations différentielles compliquées en mesurant la sortie
       d'un circuit électrique régi par cette équation.
     </p>
+    <p>
+      Le système proie/prédateur semble être un sujet particulièrement
+      intéressant : il fait intervenir des équations différentielles couplées.
+    </p>
 
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
@@ -276,10 +280,50 @@
     </div>
 
     <h3>
-      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Idées et
-      apport personnel:
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Apport
+      personnel:
     </h3>
-    <ul class="list-decimal">
+    <!-- <ul class="list-decimal">
+      <li>
+        Concevoir un système physique<span class="text-accent">*</span> donc l'équation
+        différentielle est connue et irrésolvable à la main : équation différentielle
+        d'ordre 3 ou plus, non linéaire, ...
+      </li>
+      <li>
+        Créer un système électrique dont l'équation différentielle est la même
+        que celle du système physique en identifiant les coefficients.
+      </li>
+      <li>
+        Mesurer la réponse du système électrique, et ainsi prévoir le
+        comportement du système physique
+      </li>
+      <li>
+        Comparer le résultat prévu et le comportement réel du système physique
+        et en déduire la pertinence du modèle électrique
+      </li>
+      <li>
+        Éventuellement résoudre de manière numérique l'équation pour avoir une
+        meilleure précision liées aux erreurs.
+      </li>
+    </ul>
+
+    <h4><span class="text-accent">*</span>Contraintes problématique :</h4>
+    <p>
+      Le système physque devrait répondre à des besoins particuliers, ce qui
+      permettra de donner un fil conducteur à la partie « Apport personnel » (et
+      éventuellement relier l'idée du projet au thème imposé ?).
+      <br />
+      Exemples :
+    </p>
+    <ul>
+      <li>
+        Masse-ressorts dopés (entrée non sinusoïdale/périodique), ou
+        amortissement différents (milieu aquatique, ...) ?
+      </li>
+      <li>(pas trop d'idées actuellement)</li>
+    </ul>
+
+    <h<ul class="list-decimal">
       <li>
         Concevoir un système physique<span class="text-accent">*</span> donc l'équation
         différentielle est connue et irrésolvable à la main : équation différentielle
@@ -325,7 +369,13 @@
       répercutent sur la prédiction du comportement du système physique :
       comment se comporte réellement un condensateur/une bobine, en contraste
       avec le dipôle idéal ? <span class="text-accent">À développer</span>
-    </p>
+    </p>4>Sur les erreurs :</h4>
+    <p>
+      Étudier la propagation des erreurs dans le modèle, et comment elles se
+      répercutent sur la prédiction du comportement du système physique :
+      comment se comporte réellement un condensateur/une bobine, en contraste
+      avec le dipôle idéal ? <span class="text-accent">À développer</span>
+    </p> -->
 
     <!-- <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Dernier
