@@ -5,6 +5,8 @@
   import mit from "$lib/mit.pdf";
   import corio from "$lib/corio.pdf";
   import xx from "$lib/tipe.pdf";
+  import buancom from "$lib/buancom.pdf";
+  import hnanhycom from "$lib/hnanhycom.pdf";
   import coriocomplet from "$lib/coriocomplet.pdf";
 </script>
 
@@ -225,8 +227,51 @@
                 class="link-primary">Article</a
               ></td
             >
-          </tr></tbody
-        >
+          </tr>
+
+          <tr>
+            <th>7</th>
+            <!-- <td>
+              <div class="badge text-green-500">Abordable</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td> -->
+            <td>M. Molin</td>
+            <td
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+              dolores laboriosam temporibus soluta impedit aut?
+            </td>
+            <td
+              ><a
+                href={buancom}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">PDF</a
+              ></td
+            >
+          </tr>
+
+          <tr>
+            <th>8</th>
+            <!-- <td>
+              <div class="badge text-green-500">Abordable</div>
+              <div class="badge text-pink-500">À étudier</div>
+            </td> -->
+            <td>M. Molin</td>
+            <td
+              >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Repellat commodi quam dolorum at voluptatem nesciunt quo
+              excepturi, libero odio tenetur.
+            </td>
+            <td
+              ><a
+                href={hnanhycom}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link-primary">PDF</a
+              ></td
+            >
+          </tr>
+        </tbody>
       </table>
     </div>
 
