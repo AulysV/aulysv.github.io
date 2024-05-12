@@ -69,6 +69,7 @@
   <div class="divider mx-10">
     <i class="fa-solid fa-minus text-3xl text-primary"></i>
   </div>
+  <p class="text-center my-5">Les images peuvent mettre du temps à charger.</p>
 
   <!-- <div id="image1" class="rounded-lg h-64" data-theme="dark">
     <div id="blur1" class="rounded-lg"></div>
