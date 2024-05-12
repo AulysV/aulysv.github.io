@@ -11,7 +11,7 @@
 </script>
 
 <div class="min-h-svh p-0">
-  <h1 class="text-5xl font-bold mt-32 text-center">Tipe</h1>
+  <h1 class="text-5xl font-bold mt-10 text-center">Tipe</h1>
 
   <div class="divider mx-10">
     <i class="fa-solid fa-minus text-3xl text-primary"></i>
