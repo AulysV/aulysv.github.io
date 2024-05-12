@@ -1,3 +1,7 @@
+<script>
+  import reims from "$lib/reims.mp4";
+</script>
+
 <div class="min-h-svh p-0">
   <h1 class="text-5xl font-bold mt-32 text-center">Paris − Reims</h1>
 
@@ -16,7 +20,7 @@
   <!-- Video -->
 
   <video
-    src="$lib/reims.mp4"
+    src={reims}
     class="my-14"
     controls
     style="width: calc(100% - 50px); margin: 0 25px;"
