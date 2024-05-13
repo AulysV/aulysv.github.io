@@ -8,6 +8,7 @@
   import buancom from "$lib/buancom.pdf";
   import hnanhycom from "$lib/hnanhycom.pdf";
   import coriocomplet from "$lib/coriocomplet.pdf";
+  import im from "$lib/images/im.png";
 </script>
 
 <div class="min-h-svh p-0">
@@ -28,21 +29,49 @@
   <article id="maindiv" class="prose max-w-none lg:text-xl">
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Concept
-      général à développer :
+      général :
     </h3>
-    <p>
-      Résoudre des équations différentielles compliquées en mesurant la sortie
-      d'un circuit électrique régi par cette équation.
+    <p class="font-extrabold text-2xl">
+      Résoudre des équations différentielles en mesurant la sortie d'un circuit
+      électrique régi par une équation analogue.
     </p>
-    <p>
-      Le système proie/prédateur semble être un sujet particulièrement
-      intéressant : il fait intervenir des équations différentielles couplées.
+    <p class="text-justify">
+      Avant la révolution numériques, les calculateurs les plus puissants
+      étaient les calculateurs analogiques : il permettaient d'obtenir le
+      résultat d'équations complexes sans les résoudre. Plusieurs exemples
+      illustrent leur utilité. La plus ancienne est sûrement l'Anthikythera, un
+      calculateur en bronze datant de l'antiquité permettant de simuler les
+      mouvement des astres célestes. Plus récemment, Kelvin s'est penché sur la
+      prédiction des marées qui nécessitait de combiner les effets sinusoïdaux
+      de la lune et du soleil. Les calculateurs analogiques on atteint leur
+      faîte durant les guerres : elles permettaient de résoudre des équations
+      différentielles couplées en temps réel, par exemple lors de situations de
+      course-poursuite (pursuit curves).
     </p>
-
+    <p class="text-justify">
+      Le numérique a fini par les remplacer, car permettait des usages multiples
+      et était exact. Néanmoins, les calculateurs analogiques sont loins d'être
+      de vieux ordinateurs remplacés par des successeurs plus performants. Ils
+      ont une utilité plus directe, celle de pouvoir effectuer des caluls
+      instantanés et continus, sans échantillonnage. Si un ordinateur moderne
+      doit utiliser une dizaines de transistors pour effectuer une addition, et
+      quelques centaines voire milliers pour une multiplicaiton, le calculateur
+      quant à lui utilise les propriétés intrinsèques des composants : la loi
+      des neuds pour l'addition et la loi d'Ohm pour la multiplication. <br />
+    </p>
+    <p class="text-justify"></p>
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
       ></i>Bibliographie :
     </h3>
+
+    <p>Article principal :</p>
+    <a
+      href={buancom}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="link-primary">Analog Computing von Prof. Dr. Bernd Ulmann</a
+    >
 
     <div class="overflow-x-auto">
       <table class="table-xs md:table-md lg:table-lg">
@@ -234,7 +263,7 @@
           </tr>
 
           <tr>
-            <th>7</th>
+            <th>8</th>
             <!-- <td>
               <div class="badge text-green-500">Abordable</div>
               <div class="badge text-pink-500">À étudier</div>
@@ -255,7 +284,7 @@
           </tr>
 
           <tr>
-            <th>8</th>
+            <th>9</th>
             <!-- <td>
               <div class="badge text-green-500">Abordable</div>
               <div class="badge text-pink-500">À étudier</div>
@@ -283,6 +312,10 @@
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Apport
       personnel:
     </h3>
+
+    <p>T</p>
+
+    <img src={im} alt="Intégrateur mécanique en légo" />
     <!-- <ul class="list-decimal">
       <li>
         Concevoir un système physique<span class="text-accent">*</span> donc l'équation
