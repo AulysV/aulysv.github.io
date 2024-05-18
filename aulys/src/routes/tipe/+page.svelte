@@ -9,6 +9,9 @@
   import hnanhycom from "$lib/hnanhycom.pdf";
   import coriocomplet from "$lib/coriocomplet.pdf";
   import im from "$lib/images/im.png";
+  // import pendule from "$lib/pendule.mp4";
+  import mainpy from "$lib/images/mainpy.png";
+  import output from "$lib/images/output.png";
 </script>
 
 <div class="min-h-svh p-0">
@@ -313,9 +316,105 @@
       personnel:
     </h3>
 
-    <p>T</p>
+    <p>
+      Le contour de l'apport personnel sera défini plus nettement après les
+      premières expérimentaitons qui permettrons de délimiter ce qui est
+      possible de ce qui ne l'est pas.
+    </p>
+
+    <h2>Intégrateur mécanique</h2>
+
+    <h4>Travail réalisé</h4>
+
+    <p>
+      La première idée était celle d'un intégrateur mécanique permettant
+      d'explorer rapidement les limites du calcul analogique mécanique.
+      Malheuresement, le temps et les ressources n'ont pas été suffisants pour
+      parvenir jusqu'au fonctionnement complet de l'intégrateur mécanique.
+    </p>
+
+    <p>
+      Cependant, une grande partie du travail a été réalisé. Un moteur permet de
+      fournir une vitesse de rotation constante à la plaque carrée faisant
+      office de disque. <br />
+      Plus haut, un module translatable permet le traçage de la courbe dont l'intégrale
+      est voulue (la partie « contrôle du traçage » n'a pas encore été réalisée...").
+      <br />
+      La vitesse de rotation de la roue dépend donc de la position de cette dernière
+      sur le "disque" en rotation. La distance de son point d’appui avec le centre
+      du disque, <code>y</code>, varie dans le temps. <br />
+      Quand le disque tourne d’un angle infinitésimal dθ, soit pendant un intervalle
+      de temps <code>βdτ</code>, l’axe de la roulette tourne d’un angle
+      <code>y(τ) dθ</code>. Pendant un intervalle de temps <code>[0, t]</code>,
+      l’axe de la roulette tourne donc d’un angle <code>α ∫ y(τ) β dτ</code>.
+      <br />
+      Le cylindre en bois transmet donc la vitesse de rotation à une vis sans fin
+      qui permet le traçage de l’intégrale (de 0 à t) : <code>∫ y(τ) dτ</code>,
+      à un facteur de proportionnalité près. <br />
+      <a
+        href="https://interstices.info/les-calculateurs-analogiques/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link link-hover">Source des calculs</a
+      >
+    </p>
+
+    <h4>Travail restant</h4>
+    <ul>
+      <li>
+        Création de la partie qui controllera la courbe fournie à l'intégrateur.
+      </li>
+
+      <li>
+        Mise en place des supports permettant le traçage (j'ai déjà relié le
+        disque en rotation à des systèmes d'engrenages permettant de fournir
+        d'autres tiges en rotation, dont celles nécessaires à la translation des
+        supports).
+      </li>
+    </ul>
 
     <img src={im} alt="Intégrateur mécanique en légo" />
+
+    <hr />
+
+    <h2>Programme python</h2>
+
+    <p>
+      Seconde idée : réalisation d'un programme python qui prend en entrée un
+      tableau de valeurs : <code>t</code> et une autre variable <code>x</code> (ou
+      plusieurs autres variables), et qui renvoie en sortie les détails d'un circuit
+      électrique possédant une équation différentielle dont le résultat est analogue
+      aux données fournies par le fichier de données.
+    </p>
+
+    <h4>Étapes de la réalisation du programme :</h4>
+    <p>
+      J'ai commencé par travailler sur un système simple : le pendule plan
+      amorti. <br />
+      Une vidéo
+      <!-- <a
+        href={pendule}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-primary">vidéo</a
+      > -->
+      de pendule plan a été prise durant un TP de physque. J'ai réalisé le pointage
+      grâce à <code>Tracker</code>, et ai exporté les données sur un fichier
+      texte qui contient une liste de temps sur la première colonne, et une
+      liste d'angles sur la deuxième.
+    </p>
+    <p>
+      Le programme suivant permet d'approximer la courbe par une sinusoïdale
+      amortie, et d'en retrouver l'équadiff correspondante. <br />
+      J'ai ensuite réaliser les calculs pour retrouver les coefficients du circuit
+      RLC correspondant.
+    </p>
+
+    <img src={mainpy} />
+
+    <h4>Output :</h4>
+    <img src={output} />
+
     <!-- <ul class="list-decimal">
       <li>
         Concevoir un système physique<span class="text-accent">*</span> donc l'équation
