@@ -53,14 +53,18 @@
     </p>
     <p class="text-justify">
       Le numérique a fini par les remplacer, car permettait des usages multiples
-      et était exact. Néanmoins, les calculateurs analogiques sont loins d'être
-      de vieux ordinateurs remplacés par des successeurs plus performants. Ils
-      ont une utilité plus directe, celle de pouvoir effectuer des caluls
-      instantanés et continus, sans échantillonnage. Si un ordinateur moderne
-      doit utiliser une dizaines de transistors pour effectuer une addition, et
-      quelques centaines voire milliers pour une multiplicaiton, le calculateur
-      quant à lui utilise les propriétés intrinsèques des composants : la loi
-      des neuds pour l'addition et la loi d'Ohm pour la multiplication. <br />
+      et exacts. Répéter deux fois la même expérence donne deux résultats
+      parfaitement égaux. Cette exactitude est possible grâce à
+      l'échantillonnage des données, qui devient de moins en moins problématique
+      grâce à la puissance de calcul des ordinateurs modernes. Néanmoins, les
+      calculateurs analogiques sont loins d'être de vieux ordinateurs remplacés
+      par des successeurs plus performants. Ils ont une utilité plus directe,
+      celle de pouvoir effectuer des caluls instantanés et continus, sans
+      échantillonnage. Si un ordinateur moderne doit utiliser une dizaines de
+      transistors pour effectuer une addition, et quelques centaines voire
+      milliers pour une multiplicaiton, le calculateur quant à lui utilise les
+      propriétés intrinsèques des composants : la loi des neuds pour l'addition
+      et la loi d'Ohm pour la multiplication. <br />
     </p>
     <p class="text-justify"></p>
     <h3>
@@ -406,7 +410,7 @@
     <p>
       Le programme suivant permet d'approximer la courbe par une sinusoïdale
       amortie, et d'en retrouver l'équadiff correspondante. <br />
-      J'ai ensuite réaliser les calculs pour retrouver les coefficients du circuit
+      J'ai ensuite réalisé les calculs pour retrouver les coefficients du circuit
       RLC correspondant.
     </p>
 
