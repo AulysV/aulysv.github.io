@@ -12,7 +12,7 @@
   }
 </script>
 
-<div class="hero h-svh">
+<div id="hero" class="hero">
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
@@ -33,6 +33,73 @@
     </div>
   </div>
 </div>
+
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    <!-- Page content here -->
+    <label
+      for="my-drawer-2"
+      class="toast toast-start toast-middle m-3 btn btn-circle drawer-button lg:hidden"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </label>
+  </div>
+  <div class="drawer-side">
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"
+    ></label>
+    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <ul class="menu w-56">
+        <li><a>Item 1</a></li>
+        <li>
+          <a>Parent</a>
+          <ul>
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+            <li>
+              <a>Parent</a>
+              <ul>
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </ul>
+  </div>
+</div>
+
+<div class="content">
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quasi sunt
+    assumenda pariatur possimus minima harum voluptate aperiam, ea impedit
+    aliquid debitis provident eius sed cumque illum saepe ducimus vero
+    repellendus accusantium magnam accusamus rem? Velit ea iusto hic blanditiis
+    voluptatem eaque ipsum nobis aspernatur repellendus? Quo dignissimos
+    perferendis, omnis quasi voluptatum fugit placeat? Ipsa officia ea expedita
+    velit dicta consequuntur harum eligendi natus dolorem ratione nemo nostrum,
+    iusto magni maiores doloribus, cum omnis nobis asperiores adipisci vitae
+    nisi voluptatibus labore sint? Quos nostrum ipsam explicabo possimus
+    officiis ducimus eveniet ipsa sunt architecto modi, repellendus fugiat
+    facilis laudantium! Itaque optio voluptates ullam reprehenderit reiciendis,
+    voluptatum delectus libero sint animi! Nisi saepe omnis odio? Quibusdam
+    iusto rerum ipsam error ut porro amet incidunt inventore veritatis at
+    nesciunt, mollitia facilis quas dignissimos omnis cumque architecto impedit,
+    ex repellat minima. Saepe, tempora alias. Eius minus cum quidem aliquid
+    commodi! Rem, recusandae. Maxime inventore perferendis quos! Temporibus
+    suscipit ex architecto odit tenetur quia totam recusandae expedita
+    repellendus atque quae libero laudantium rem asperiores, ipsam consequatur
+    dolore laboriosam adipisci aliquam pariatur nostrum nam ab accusantium!
+  </p>
+</div>
+
+<!-- <style>
+  #hero {
+    height: 70vh;
+  }
+</style> -->
 
 <!-- <style>
 #landing {

@@ -38,7 +38,7 @@
 
 <div
   id="navbarmain"
-  class="items-center p-2 bg-base-200 rounded m-5 flex justify-between"
+  class="items-center p-2 bg-base-200 rounded m-5 flex justify-between h-14"
 >
   <div class="navbar-start max-w-fit">
     <div class="dropdown">
@@ -132,7 +132,7 @@
   </div>
 {/key}
 
-<footer class="items-center p-4 bg-base-200 rounded m-5">
+<footer class="items-center p-4 bg-base-200 rounded m-5 h-14">
   <aside class="items-center grid-flow-col">
     <p>Aulys − 2024</p>
   </aside>
