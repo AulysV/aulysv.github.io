@@ -74,7 +74,7 @@
         >, ...)
       </li>
       <li>Lego (🗿)</li>
-      <li>Travelling (cycling)</li>
+      <li>Travelling (→ cycling and photos)</li>
       <li>Minecraft</li>
       <li>
         <em>Doing stupid things</em> but seriously
