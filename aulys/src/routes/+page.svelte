@@ -12,7 +12,7 @@
   }
 </script>
 
-<div id="hero" class="hero h-dvh">
+<div id="hero" class="hero h-svh">
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
