@@ -36,103 +36,110 @@
   </div>
 {/if}
 
-<div
-  id="navbarmain"
-  class="items-center p-2 bg-base-200 rounded m-5 flex justify-between"
->
-  <div class="navbar-start max-w-fit">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          ><path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16"
-          /></svg
-        >
+<div class="drawer">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content flex flex-col items-center justify-center">
+    {#key data.pathname}
+      <div transition:slide>
+        <slot />
       </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-      >
-        <li><a href="/tipe">Tipe</a></li>
-        <!-- <li><a href="/reims">Paris − Reims</a></li> -->
-        <!-- <li><a href="/autres/countdown">Concours</a></li> -->
-
-        <!-- <li>
-          <a>Autres</a>
-          <ul class="p-2">
-            <li><a href="/autres">Projets</a></li>
-            <li><a href="/autres/countdown">Concours</a></li>
-          </ul>
-        </li> -->
-      </ul>
-    </div>
-    <a class="btn btn-ghost text-xl" href="/">Accueil</a>
-  </div>
-  <div class="navbar-center hidden lg:flex max-w-fit">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/tipe">Tipe</a></li>
-      <!-- <li><a href="/reims">Paris − Reims</a></li> -->
-      <!-- <li><a href="/autres/countdown">Concours</a></li> -->
-      <!-- 
-      <li>
-        <details>
-          <summary>Autres</summary>
-          <ul class="p-2">
-            <li><a href="/autres">Projets</a></li>
-            <li><a href="/autres/countdown">Concours</a></li>
-          </ul>
-        </details>
-      </li> -->
-    </ul>
-  </div>
-  <div class="navbar-end max-w-fit">
-    <label class="flex cursor-pointer gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        ><circle cx="12" cy="12" r="5" /><path
-          d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
-        /></svg
-      >
-      <input type="checkbox" value="adwaita" class="toggle theme-controller" />
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        ><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg
-      >
+    {/key}
+    <label
+      for="my-drawer-2"
+      class="toast toast-start toast-top btn btn-circle drawer-button m-5"
+    >
+      <i class="fa-solid fa-bars"></i>
     </label>
+  </div>
+
+  <div class="drawer-side">
+    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"
+    ></label>
+
+    <ul
+      class="menu bg-base-200 text-base-content w-80 p-4 m-4 rounded-md min-h-[calc(100vh-32px)]"
+    >
+      <div class="flex justify-evenly">
+        <a class="btn btn-ghost text-xl" href="/"
+          ><i class="fas fa-home"></i> Accueil</a
+        >
+        <label class="swap swap-rotate">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" class="theme-controller" value="adwaita" />
+
+          <!-- sun icon -->
+          <svg
+            class="swap-off h-7 w-7 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+
+          <!-- moon icon -->
+
+          <svg
+            class="swap-on h-7 w-7 fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+            />
+          </svg>
+        </label>
+      </div>
+      <!-- <li>
+        <div class="flex w-52 flex-col gap-4 self-center my-5">
+          <div class="flex items-center gap-4">
+            <div class="skeleton h-16 w-16 shrink-0 rounded-full"></div>
+            <div class="flex flex-col gap-4">
+              <div class="skeleton h-4 w-20"></div>
+              <div class="skeleton h-4 w-28"></div>
+            </div>
+          </div>
+          <div class="skeleton h-32 w-full"></div>
+        </div>
+      </li> -->
+
+      <li></li>
+      <li>
+        <a href="https://biblio.aulysv.fr" target="_blank"
+          >Bibliothèque de notes <i class="fa-solid fa-up-right-from-square"
+          ></i></a
+        >
+      </li>
+      <li><a href="/reims">Reims</a></li>
+      <li><a href="https://biblio.aulysv.fr/Liste/TIPE">TIPE</a></li>
+      <!-- <li>
+        <a>Parent</a>
+        <ul>
+          <li><a>Submenu 1</a></li>
+          <li><a>Submenu 2</a></li>
+          <li>
+            <a>Parent</a>
+            <ul>
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a>Item 3</a></li> -->
+    </ul>
   </div>
 </div>
 
-{#key data.pathname}
-  <div transition:slide>
-    <slot />
+<!-- <aside class="fixed top-0 left-0 w-64 h-screen bg-red-600">
+  <div class="h-screen flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold">Test Div</h1>
+    <p class="text-lg">This is a test div.</p>
   </div>
-{/key}
+</aside> -->
 
-<footer class="items-center p-4 bg-base-200 rounded m-5">
+<!-- <footer class="items-center p-4 bg-base-200 rounded m-5 h-14">
   <aside class="items-center grid-flow-col">
     <p>Aulys − 2024</p>
   </aside>
@@ -154,7 +161,7 @@
       <i class="fa-brands fa-discord"></i></a
     >
   </nav>
-</footer>
+</footer> -->
 
 <!-- <style>
 #navbarmain {
