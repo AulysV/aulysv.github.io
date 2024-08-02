@@ -47,7 +47,7 @@
     {/key}
     <label
       for="my-drawer-2"
-      class="toast toast-start toast-top btn btn-circle btn-neutral drawer-button m-5 ml-7"
+      class="toast toast-start toast-top btn btn-circle drawer-button m-5 ml-7"
     >
       <i class="fa-solid fa-bars"></i>
     </label>
@@ -57,9 +57,7 @@
     <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"
     ></label>
 
-    <ul
-      class="menu bg-neutral text-neutral-content w-80 p-4 m-4 rounded-md min-h-[calc(100vh-32px)]"
-    >
+    <ul class="menu bg-base-200 w-80 p-4 min-h-svh">
       <div class="flex justify-evenly">
         <a class="btn btn-ghost text-xl" href="/"
           ><i class="fas fa-home"></i> Accueil</a
@@ -140,7 +138,9 @@
   </div>
 </aside> -->
 
-<footer class="footer items-center bg-neutral text-neutral-content p-10 sm:flex-row flex-col">
+<footer
+  class="footer items-center bg-base-200-content p-10 sm:flex-row flex-col"
+>
   <aside>
     <img src={aulys} alt="logoauys" class="h-20 w-20" />
     <p>2024</p>
