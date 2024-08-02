@@ -35,6 +35,103 @@
       général :
     </h3>
     <p class="font-extrabold text-2xl">
+      Comment résoudre une équation différentielle analogiquement ?
+    </p>
+
+    <p class="text-justify">
+      Avant la révolution numérique, les calculs physiques étaient réalisés à la
+      main et mécaniquement (anticythère), puis électroniquement depuis la fin
+      du XIXe.
+    </p>
+    <p>
+      Le numérique a fini par les remplacer, pour deux raisons principales : les
+      ordinateurs numériques font des calculs exacts, et peuvent être programmés
+      pour réaliser une variété infinie de tâches, contrairement à l’analogique
+      qui consiste à réaliser des calculs en se basant sur les propriétés
+      fondamentales de la physique qui est régie entre autres par des équations
+      différentielles (loi des noeuds ou lois de fonctionnement).
+    </p>
+    <p>
+      Cependant, l’analogique a l'énorme avantage de ne pas échantillonner le
+      réel et réaliser les calculs en se basant sur les propriétés de la
+      physique peut faire gagner des facteurs 1000 en termes de rapidité et de
+      coût énergétique, surtout si on considère l’impact écologique actuel du
+      numérique.
+    </p>
+    <p>
+      Nous pouvons donc nous demander **comment il est possible résoudre une
+      équation différentielle analogiquement**.
+    </p>
+    <p>
+      Les premières idées qui me sont venues à propos de ce sujet, c’est le lien
+      fort qui existe entre la mécanique et l’électronique : les mêmes équations
+      différentielles existent entre le masse-ressort amorti et le RLC par
+      exemple. Donc naturellement, pourquoi ne pas résoudre le masse ressort
+      avec un RLC, et mesurer la tension aux bornes du condensateur pour avoir
+      une idée de l’angle en fonction du temps ? Puisqu’il ne s’agit pas des
+      mêmes grandeurs, les coefficients de l’équation de l'oscillateur
+      harmonique sont une des choses auxquelles il faut faire attention. Et par
+      identification des coefficients, on peut trouver des valeurs de R, L, et C
+      en fonction de la masse du pendule et de la raideur du ressort.
+    </p>
+    <p>
+      Je me suis vite rendu compte que le problème de cette approche est la
+      nécessité d’avoir l’équation du masse-ressort. J’ai donc créé un programme
+      python permettant d’obtenir une équation différentielle potentielle à
+      partir d’un tableau de mesures, en testant plusieurs modèles d’équations
+      différentielles grâce à SciPy. Le programme fonctionne pour un pendule
+      plan : la solution en sinusoïdale amortie est détectée, et le programme me
+      renvoie des valeurs de R, L, C qui ne fonctionnent pas.
+    </p>
+    <p>
+      Cette méthode, qu’on peut appeler la méthode du circuit analogue,
+      fonctionne pour des modèles simples et linéaires, mais on se trouve
+      rapidement limité par nos connaissances en électronique la complexité de
+      l’équation différentielle, surtout si elle n’est pas linéaire (en
+      induction par exemple).
+    </p>
+    <p>
+      Les physiciens ont donc développé la méthode d’intégrations successives.
+      Théoriquement, elle consiste à isoler le terme de plus haut degré n, de
+      l’intégrer n fois, puis répéter l’opération pour chaque degré de n-1
+      jusqu’à 1, tout en sommant à chaque fois les termes intégrés. → “schéma
+      analytique”
+    </p>
+    <p>
+      Le problème de résolution d’équation différentielle se résume donc en un
+      problème d’intégration. Mais l’intégration est assez simplement réalisable
+      grâce à des composants électroniques comme les amplificateurs linéaires.
+      Après avoir transformé le schéma analytique en circuit électrique, on
+      obtient un circuit théorique suivant, en faisant attention à ajouter des
+      résistances variables pour simuler les coefficients de l’équation.
+    </p>
+    <p>
+      L’avantage de cette méthode est son adaptabilité : il suffit de changer
+      les résistances en des composants non linéaires pour avoir n’importe quel
+      type d’équation différentielle.
+    </p>
+    <p>
+      Une autre méthode pour intégrer successivement, est de le faire
+      mécaniquement. Une entrée sous forme de translation est donnée à
+      l’intégrateur mécanique, et le déplacement de la roue sur le disque en
+      rotation permet de donner une vitesse de rotation intégrée en sortie.
+    </p>
+    <p>
+      L’avantage de ces méthodes est le très faible coût énergétique. Le moteur
+      lego est alimenté par 6 piles 1.5 volts pour une précision inexistante.
+    </p>
+    <p>
+      Pour conclure, il existe plusieurs méthodes pour résoudre une équation
+      différentielle analogiquement : avec un circuit analogue, ou grâce à la
+      méthode d’intégrations successives.
+    </p>
+    <p>
+      L’analogique reprend de la place de l'ingénierie surtout en traitement de
+      signal et en machine learning, où le temps de calcul affreux le coût
+      énergétique monstrueux sont une limite principale du numérique que
+      l’analogique n’a pas.
+    </p>
+    <!-- <p class="font-extrabold text-2xl">
       Résoudre des équations différentielles en mesurant la sortie d'un circuit
       électrique régi par une équation analogue.
     </p>
@@ -66,7 +163,8 @@
       propriétés intrinsèques des composants : la loi des neuds pour l'addition
       et la loi d'Ohm pour la multiplication. <br />
     </p>
-    <p class="text-justify"></p>
+    <p class="text-justify"></p> -->
+
     <h3>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
       ></i>Bibliographie :

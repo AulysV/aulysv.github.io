@@ -12,89 +12,89 @@
   }
 </script>
 
-<div id="hero" class="hero">
+<div id="hero" class="hero h-dvh">
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
     <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
 
     <div>
-      <h1 class="text-5xl font-bold">{greeting} !</h1>
-      <p class="py-6">
-        Bienvenue sur le site d'Aulys VINAY, codé à l'arrache après un DS de
-        physique.
+      <h1 class="text-5xl lg:text-8xl font-bold">{greeting} !</h1>
+      <p class="py-6 lg:text-3xl">
+        This is Aulys VINAY's website, coded on the fly after a physics exam.
       </p>
 
-      <a href="/tipe"
+      <a href="#Test"
         ><button class="btn btn-primary">
-          <i class="fa-solid fa-microscope mr-3 text-ba"></i>Tipe</button
+          <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button
         >
       </a>
     </div>
   </div>
 </div>
 
-<div class="drawer lg:drawer-open">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-  <div class="drawer-content flex flex-col items-center justify-center">
-    <!-- Page content here -->
-    <label
-      for="my-drawer-2"
-      class="toast toast-start toast-middle m-3 btn btn-circle drawer-button lg:hidden"
-    >
-      <i class="fa-solid fa-bars"></i>
-    </label>
-  </div>
-  <div class="drawer-side">
-    <label for="my-drawer-2" aria-label="close sidebar" class="drawer-overlay"
-    ></label>
-    <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-      <ul class="menu w-56">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul>
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-            <li>
-              <a>Parent</a>
-              <ul>
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
+<div id="Test" class="h-dvh bg-base-200 w-dvw">
+  <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
+    <h1>Why are you here?</h1>
+    <h2>🤨 To know more about me</h2>
+    <p>
+      <a href="#about"
+        ><i class="fa-solid fa-arrow-down text-ba mr-3"></i>Scroll down</a
+      >
+    </p>
+    <h2>📬️ To contact me</h2>
+    <p>Mail : <a href="mailto:contact@aulysv.fr">contact@aulysv.fr</a></p>
+    <h2>🤷 No precise reason</h2>
+    <p>
+      Take a look at my notes library (in French) : <a
+        href="https://biblio.aulysv.fr/"
+        target="_blank"
+        rel="noopener noreferrer">https://biblio.aulysv.fr/</a
+      >, or simply continue scrolling
+    </p>
+  </article>
+</div>
+
+<div id="about" class="h-dvh bg-base-100 w-dvw">
+  <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
+    <h1>Who am I?</h1>
+    <p>
+      I'm Aulys VINAY, a french student in engeneering, currently in "maths spé"
+      (aka second year of eating maths and physics).
+    </p>
+    <p>I like :</p>
+    <ul>
+      <li>Science (stockholm syndrome)</li>
+      <li>
+        Music (🎹, 🎷, 🎸, 🪈 <span class="text-sm">(this is an oboe)</span>,
+        ...)
+      </li>
+      <li>
+        Tech-related stuff (web dev, linux <span class="text-sm">gnome ❤️</span
+        >, ...)
+      </li>
+      <li>Lego (🗿)</li>
+      <li>Travelling (cycling)</li>
+      <li>Minecraft</li>
+      <li>
+        <em>Doing stupid things</em> but seriously
+        <a
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link-hover"
+          >(learn why
+          <i class="fa-solid fa-up-right-from-square text-sm"></i>)</a
+        >
+      </li>
+      <!-- Dire why : lien note biblio -->
     </ul>
-  </div>
+    <p>I don't like :</p>
+    <ul>
+      <li>Pineapple on pizza 🔫</li>
+    </ul>
+  </article>
 </div>
-
-<div class="content">
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quasi sunt
-    assumenda pariatur possimus minima harum voluptate aperiam, ea impedit
-    aliquid debitis provident eius sed cumque illum saepe ducimus vero
-    repellendus accusantium magnam accusamus rem? Velit ea iusto hic blanditiis
-    voluptatem eaque ipsum nobis aspernatur repellendus? Quo dignissimos
-    perferendis, omnis quasi voluptatum fugit placeat? Ipsa officia ea expedita
-    velit dicta consequuntur harum eligendi natus dolorem ratione nemo nostrum,
-    iusto magni maiores doloribus, cum omnis nobis asperiores adipisci vitae
-    nisi voluptatibus labore sint? Quos nostrum ipsam explicabo possimus
-    officiis ducimus eveniet ipsa sunt architecto modi, repellendus fugiat
-    facilis laudantium! Itaque optio voluptates ullam reprehenderit reiciendis,
-    voluptatum delectus libero sint animi! Nisi saepe omnis odio? Quibusdam
-    iusto rerum ipsam error ut porro amet incidunt inventore veritatis at
-    nesciunt, mollitia facilis quas dignissimos omnis cumque architecto impedit,
-    ex repellat minima. Saepe, tempora alias. Eius minus cum quidem aliquid
-    commodi! Rem, recusandae. Maxime inventore perferendis quos! Temporibus
-    suscipit ex architecto odit tenetur quia totam recusandae expedita
-    repellendus atque quae libero laudantium rem asperiores, ipsam consequatur
-    dolore laboriosam adipisci aliquam pariatur nostrum nam ab accusantium!
-  </p>
-</div>
-
 <!-- <style>
   #hero {
     height: 70vh;
@@ -108,10 +108,15 @@
     margin: 2em auto;
     border-radius: 20px;
     background-image: url('src/images/lush-min.jpg');
-    background-attachment: fixed;
-    background-size: cover;
-    /* background-position: center; */
-    background-repeat: no-repeat;
+    background-attachment: fixed;document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
     display: flex;
     justify-content: center;
     align-items: center;
