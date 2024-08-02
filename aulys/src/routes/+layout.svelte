@@ -1,4 +1,5 @@
 <script>
+  import aulys from "$lib/images/aulys.png";
   import "../app.css";
   import "@fortawesome/fontawesome-free/css/all.min.css";
   // import { fade } from "svelte/transition";
@@ -46,7 +47,7 @@
     {/key}
     <label
       for="my-drawer-2"
-      class="toast toast-start toast-top btn btn-circle drawer-button m-5"
+      class="toast toast-start toast-top btn btn-circle btn-neutral drawer-button m-5 ml-7"
     >
       <i class="fa-solid fa-bars"></i>
     </label>
@@ -57,7 +58,7 @@
     ></label>
 
     <ul
-      class="menu bg-base-200 text-base-content w-80 p-4 m-4 rounded-md min-h-[calc(100vh-32px)]"
+      class="menu bg-neutral text-neutral-content w-80 p-4 m-4 rounded-md min-h-[calc(100vh-32px)]"
     >
       <div class="flex justify-evenly">
         <a class="btn btn-ghost text-xl" href="/"
@@ -139,7 +140,55 @@
   </div>
 </aside> -->
 
-<!-- <footer class="items-center p-4 bg-base-200 rounded m-5 h-14">
+<footer class="footer items-center bg-neutral text-neutral-content p-10 sm:flex-row flex-col">
+  <aside>
+    <img src={aulys} alt="logoauys" class="h-20 w-20" />
+    <p>2024</p>
+  </aside>
+  <aside>
+    <p>Imagine footer things here</p>
+    <p>
+      <a
+        href="https://github.com/AulysV/aulysv.github.io"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link">This website's source code</a
+      >
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Lorem Ipsum</h6>
+    <div class="grid grid-flow-col gap-4">
+      <a
+        href="https://github.com/AulysV"
+        class="link text-2xl underline hover:text-primary mx-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-github"></i></a
+      >
+      <a
+        href="https://discord.com/users/637695900382134303"
+        class="link underline hover:text-primary text-2xl mx-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-discord"></i></a
+      >
+      <a
+        href="https://www.instagram.com/aulysvinay/"
+        class="link underline hover:text-primary text-2xl mx-2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-instagram fa-solid"></i></a
+      >
+    </div>
+  </nav>
+</footer>
+
+<!-- 
+<footer class="footer items-center p-4 bg-base-300">
   <aside class="items-center grid-flow-col">
     <p>Aulys − 2024</p>
   </aside>

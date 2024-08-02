@@ -1,6 +1,6 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
-  import aulys from "$lib/images/aulys.png";
+  import aulys from "$lib/images/napopiano.jpg";
 
   let greeting = "Bonjour";
 
@@ -16,10 +16,13 @@
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
-    <img src={aulys} class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60" />
+    <img
+      src={aulys}
+      class="mask mask-hexagon-2 lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60"
+    />
 
     <div>
-      <h1 class="text-5xl lg:text-8xl font-bold">{greeting} !</h1>
+      <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-3xl">
         This is Aulys VINAY's website, coded on the fly after a physics exam.
       </p>
@@ -33,7 +36,7 @@
   </div>
 </div>
 
-<div id="Test" class="h-dvh bg-base-200 w-dvw">
+<div id="Test" class="min-h-dvh bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Why are you here?</h1>
     <h2>🤨 To know more about me</h2>
@@ -55,7 +58,7 @@
   </article>
 </div>
 
-<div id="about" class="h-dvh bg-base-100 w-dvw">
+<div id="about" class="bg-base-100 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Who am I?</h1>
     <p>
