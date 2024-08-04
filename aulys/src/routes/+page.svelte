@@ -12,7 +12,7 @@
   }
 </script>
 
-<div id="hero" class="hero h-svh">
+<div id="hero" class="hero min-h-svh">
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
@@ -36,7 +36,7 @@
   </div>
 </div>
 
-<div id="Test" class="min-h-dvh bg-base-200 w-dvw">
+<div id="Test" class="min-h-svh bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Why are you here?</h1>
     <h2>🤨 To know more about me</h2>

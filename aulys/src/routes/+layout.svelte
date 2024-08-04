@@ -139,7 +139,7 @@
 </aside> -->
 
 <footer
-  class="footer items-center bg-base-200-content p-10 sm:flex-row flex-col"
+  class="footer items-center bg-base-200 p-10 sm:flex-row flex-col"
 >
   <aside>
     <img src={aulys} alt="logoauys" class="h-20 w-20" />
