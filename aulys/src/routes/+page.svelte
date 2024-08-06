@@ -39,15 +39,15 @@
 <div id="Test" class="min-h-svh bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Why are you here?</h1>
-    <h2>🤨 To know more about me</h2>
+    <h2>• To know more about me</h2>
     <p>
       <a href="#about"
         ><i class="fa-solid fa-arrow-down text-ba mr-3"></i>Scroll down</a
       >
     </p>
-    <h2>📬️ To contact me</h2>
+    <h2>• To contact me</h2>
     <p>Mail : <a href="mailto:contact@aulysv.fr">contact@aulysv.fr</a></p>
-    <h2>🤷 No precise reason</h2>
+    <h2>• No precise reason</h2>
     <p>
       Take a look at my notes library (in French) : <a
         href="https://biblio.aulysv.fr/"
@@ -68,33 +68,28 @@
     <p>I like :</p>
     <ul>
       <li>Science (stockholm syndrome)</li>
-      <li>
-        Music (🎹, 🎷, 🎸, 🪈 <span class="text-sm">(this is an oboe)</span>,
-        ...)
-      </li>
-      <li>
-        Tech-related stuff (web dev, linux <span class="text-sm">gnome ❤️</span
-        >, ...)
-      </li>
-      <li>Lego (🗿)</li>
-      <li>Travelling (→ cycling and photos)</li>
+      <li>Music</li>
+      <li>Tech-related stuff (web dev, linux, ...)</li>
+      <li>Lego</li>
+      <li>Travelling</li>
+      <!-- <li>
+        <a href="/voyages" target="_blank" rel="noopener noreferrer"
+          >Travelling</a
+        >
+      </li> -->
       <li>Minecraft</li>
       <li>
-        <em>Doing stupid things</em> but seriously
         <a
-          href="http://"
+          href="https://biblio.aulysv.fr/Sujets/%F0%9F%99%89-B%C3%AAtises"
           target="_blank"
-          rel="noopener noreferrer"
-          class="link-hover"
-          >(learn why
-          <i class="fa-solid fa-up-right-from-square text-sm"></i>)</a
+          rel="noopener noreferrer">Doing stupid things</a
         >
       </li>
       <!-- Dire why : lien note biblio -->
     </ul>
     <p>I don't like :</p>
     <ul>
-      <li>Pineapple on pizza 🔫</li>
+      <li>Pineapple on pizza</li>
     </ul>
   </article>
 </div>

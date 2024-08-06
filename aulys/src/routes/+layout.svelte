@@ -47,7 +47,7 @@
     {/key}
     <label
       for="my-drawer-2"
-      class="toast toast-start toast-top btn btn-circle drawer-button m-5 ml-7"
+      class="toast toast-start toast-top btn btn-circle btn-primary drawer-button m-5 ml-7"
     >
       <i class="fa-solid fa-bars"></i>
     </label>
@@ -110,8 +110,16 @@
           ></i></a
         >
       </li>
-      <li><a href="/reims">Reims</a></li>
-      <li><a href="https://biblio.aulysv.fr/Liste/TIPE">TIPE</a></li>
+      <!-- <li><a href="/reims">Reims</a></li> -->
+      <li>
+        <a
+          href="https://biblio.aulysv.fr/Liste/TIPE"
+          target="_blank"
+          rel="noopener noreferrer"
+          >TIPE <i class="fa-solid fa-up-right-from-square"></i></a
+        >
+      </li>
+
       <!-- <li>
         <a>Parent</a>
         <ul>
@@ -138,9 +146,7 @@
   </div>
 </aside> -->
 
-<footer
-  class="footer items-center bg-base-200 p-10 sm:flex-row flex-col"
->
+<footer class="footer items-center bg-base-200 p-10 sm:flex-row flex-col">
   <aside>
     <img src={aulys} alt="logoauys" class="h-20 w-20" />
     <p>2024</p>
