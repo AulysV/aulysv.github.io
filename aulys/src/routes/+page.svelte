@@ -80,7 +80,7 @@
       <li>Minecraft</li>
       <li>
         <a
-          href="https://biblio.aulysv.fr/Sujets/%F0%9F%99%89-B%C3%AAtises"
+          href="https://biblio.aulysv.fr/Liste/La-b%C3%AAtise"
           target="_blank"
           rel="noopener noreferrer">Doing stupid things</a
         >
