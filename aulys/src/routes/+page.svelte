@@ -86,7 +86,7 @@
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
       magnam?
     </p>
-    <div class="flex w-full flex-row xl:flex-col">
+    <div class="flex w-full flex-col xl:flex-row">
       <div class="mockup-browser border-base-300 border my-5">
         <div class="mockup-browser-toolbar">
           <div class="input border-base-300 border">
