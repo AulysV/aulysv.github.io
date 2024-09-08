@@ -81,7 +81,7 @@
       days on a website.
     </p>
 
-    <p>Test embed websites</p>
+    <!-- <p>Test embed websites</p>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
       magnam?
@@ -101,7 +101,7 @@
         </div>
         <embed src="https://tg1.aulysv.fr/" class="h-svh w-full" />
       </div>
-    </div>
+    </div> -->
   </article>
 </div>
 
