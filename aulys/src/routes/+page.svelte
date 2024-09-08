@@ -39,7 +39,22 @@
 <div id="Test" class="min-h-svh bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Why are you here?</h1>
-    <h2>• To know more about me</h2>
+    <h2>• IDK, just landed here <em>par hasard</em></h2>
+    <p>Ok</p>
+    <h2>• You're searching for something</h2>
+    <ul>
+      <li><a href="/tipe">TIPE</a></li>
+      <li><a href="/countdown">The Countdown</a></li>
+      <li>
+        <a href="https://biblio.aulysv.fr" target="_blank"
+          >Bibliothèque de notes <i class="fa-solid fa-up-right-from-square"
+          ></i></a
+        >
+      </li>
+    </ul>
+    <h2>• Third reason</h2>
+    <p>Ok</p>
+    <!-- <h2>• To know more about me</h2>
     <p>
       <a href="#about"
         ><i class="fa-solid fa-arrow-down text-ba mr-3"></i>Scroll down</a
@@ -54,11 +69,43 @@
         target="_blank"
         rel="noopener noreferrer">https://biblio.aulysv.fr/</a
       >, or simply continue scrolling
-    </p>
+    </p> -->
   </article>
 </div>
 
 <div id="about" class="bg-base-100 w-dvw">
+  <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
+    <h1>Why this page?</h1>
+    <p>
+      Needed a way to host my TIPE presentation, nothing better than spending
+      days on a website.
+    </p>
+
+    <p>Test embed websites</p>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo,
+      magnam?
+    </p>
+    <div class="flex w-full flex-row xl:flex-col">
+      <div class="mockup-browser border-base-300 border my-5">
+        <div class="mockup-browser-toolbar">
+          <div class="input border-base-300 border">
+            https://mpsi1.aulysv.fr/
+          </div>
+        </div>
+        <embed src="https://mpsi1.aulysv.fr/" class="h-svh w-full" />
+      </div>
+      <div class="mockup-browser border-base-300 border my-5">
+        <div class="mockup-browser-toolbar">
+          <div class="input border-base-300 border">https://tg1.aulysv.fr/</div>
+        </div>
+        <embed src="https://tg1.aulysv.fr/" class="h-svh w-full" />
+      </div>
+    </div>
+  </article>
+</div>
+
+<!-- <div id="about" class="bg-base-100 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <h1>Who am I?</h1>
     <p>
@@ -72,11 +119,6 @@
       <li>Tech-related stuff (web dev, linux, ...)</li>
       <li>Lego</li>
       <li>Travelling</li>
-      <!-- <li>
-        <a href="/voyages" target="_blank" rel="noopener noreferrer"
-          >Travelling</a
-        >
-      </li> -->
       <li>Minecraft</li>
       <li>
         <a
@@ -85,14 +127,13 @@
           rel="noopener noreferrer">Doing stupid things</a
         >
       </li>
-      <!-- Dire why : lien note biblio -->
     </ul>
     <p>I don't like :</p>
     <ul>
       <li>Pineapple on pizza</li>
     </ul>
   </article>
-</div>
+</div> -->
 <!-- <style>
   #hero {
     height: 70vh;
