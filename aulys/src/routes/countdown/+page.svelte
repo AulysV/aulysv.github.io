@@ -1,13 +1,21 @@
 <script>
   import { onMount, onDestroy } from "svelte";
+
   // Set the target date and time
-  const targetDate = new Date("April 15, 2025 06:00:00");
+  const targetDate = new Date(Date.UTC(2025, 3, 15, 6, 0, 0)); // Avril 15, 2025 à 06:00 UTC
+
   // Function to calculate the remaining time
   function calculateRemainingTime() {
     const now = new Date();
     const timeDifference = targetDate.getTime() - now.getTime();
-    // Calculate the remaining days, hours, minutes, and seconds
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    const months = Math.floor(timeDifference / (1000 * 60 * 60 * 24 * 30)); // Approximate number of months
+    const weeks = Math.floor(
+      (timeDifference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24 * 7)
+    );
+    const days = Math.floor(
+      (timeDifference % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24)
+    );
     const hours = Math.floor(
       (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
@@ -15,15 +23,20 @@
       (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
     );
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-    return { days, hours, minutes, seconds };
+
+    return { months, weeks, days, hours, minutes, seconds };
   }
+
   let countdown = calculateRemainingTime();
+
   // Function to update the countdown display
   function updateCountdown() {
     countdown = calculateRemainingTime();
   }
+
   // Update the countdown every second
   const interval = setInterval(updateCountdown, 1000);
+
   onMount(() => {
     // Clear the interval when the component is destroyed
     onDestroy(() => {
@@ -48,6 +61,22 @@
         <span
           class="countdown p-2 bg-neutral rounded-box font-mono text-neutral-content text-5xl lg:text-7xl"
         >
+          <span style="--value:{countdown.months};"></span>
+        </span>
+        Mois
+      </div>
+      <div class="flex flex-col">
+        <span
+          class="countdown p-2 bg-neutral rounded-box font-mono text-neutral-content text-5xl lg:text-7xl"
+        >
+          <span style="--value:{countdown.weeks};"></span>
+        </span>
+        Semaines
+      </div>
+      <div class="flex flex-col">
+        <span
+          class="countdown p-2 bg-neutral rounded-box font-mono text-neutral-content text-5xl lg:text-7xl"
+        >
           <span style="--value:{countdown.days};"></span>
         </span>
         Jours
@@ -68,6 +97,7 @@
         </span>
         Min
       </div>
+
       <div class="flex flex-col">
         <span
           class="countdown p-2 bg-neutral rounded-box font-mono text-neutral-content text-5xl lg:text-7xl"
