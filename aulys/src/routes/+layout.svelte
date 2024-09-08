@@ -112,11 +112,7 @@
       </li>
       <!-- <li><a href="/reims">Reims</a></li> -->
       <li>
-        <a
-          href="https://biblio.aulysv.fr/Liste/TIPE"
-          target="_blank"
-          rel="noopener noreferrer"
-          >TIPE <i class="fa-solid fa-up-right-from-square"></i></a
+        <a href="/tipe">TIPE</a
         >
       </li>
 

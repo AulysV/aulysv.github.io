@@ -59,8 +59,10 @@
       numérique.
     </p>
     <p>
-      Nous pouvons donc nous demander **comment il est possible résoudre une
-      équation différentielle analogiquement**.
+      Nous pouvons donc nous demander <span class="font-bold"
+        >comment il est possible résoudre une équation différentielle
+        analogiquement</span
+      >.
     </p>
     <p>
       Les premières idées qui me sont venues à propos de ce sujet, c’est le lien
@@ -177,6 +179,8 @@
       rel="noopener noreferrer"
       class="link-primary">Analog Computing von Prof. Dr. Bernd Ulmann</a
     >
+
+    <p><em>Attention : bibliographie mise à jour il y a un an</em></p>
 
     <div class="overflow-x-auto">
       <table class="table-xs md:table-md lg:table-lg">
@@ -418,11 +422,7 @@
       personnel:
     </h3>
 
-    <p>
-      Le contour de l'apport personnel sera défini plus nettement après les
-      premières expérimentaitons qui permettrons de délimiter ce qui est
-      possible de ce qui ne l'est pas.
-    </p>
+    <p><em>Attention, dernière mise à jour : Il y a 6 mois</em></p>
 
     <h2>Intégrateur mécanique</h2>
 
