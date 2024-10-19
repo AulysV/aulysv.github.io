@@ -340,15 +340,4 @@
     background: rgba(110, 110, 110, 0.158);
     backdrop-filter: blur(80px);
   }
-
-  #svgg {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    padding: 3em;
-    margin: 3em auto;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.712);
-    justify-content: center;
-  }
 </style>

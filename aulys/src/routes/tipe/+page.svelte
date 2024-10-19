@@ -8,12 +8,70 @@
     <i class="fa-solid fa-minus text-3xl text-primary"></i>
   </div>
 
-  <h3>
-    <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Concept
-    général :
-  </h3>
-  <p>Faire des calculs grâce à des circuits électriques.</p>
-  <p>Exemple : des équations</p>
+  <article id="maindiv" class="prose max-w-none lg:text-xl">
+    <h2>Résolution analogique d'équations différentielles</h2>
+
+    <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Ancrage
+      au thème
+    </h2>
+    <p>
+      Lorsqu'une solution analytique à un problème n'est pas accessible, on peut
+      recourir au numérique. Une autre méthode de résolution peut faire gagner
+      en temps de calcul ou en stabilité : la résolution analogique, grâce à des
+      circuits électriques. On convertit ainsi un problème de résolution en un
+      problème de modélisation.
+    </p>
+
+    <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Motivations
+      du choix
+    </h2>
+    <p>
+      Travailler sur le calcul analogique me permet à la fois de comprendre les
+      similarités entre l'électronique et les autres domaines de la physique,
+      mais aussi de comprendre les raisons de la réapparition récente du calcul
+      analogique dans les dernières recherches technologiques, comme en machine
+      learning.
+    </p>
+
+    <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Positionnement
+      thématique
+    </h2>
+    <ul>
+      <li><strong>Sciences industrielles</strong> : Électronique</li>
+      <li><strong>Physique</strong> : Micro-technologies</li>
+      <li>
+        <strong>Mathématiques</strong> : Analyse : Équations différentielles (EDO)
+      </li>
+    </ul>
+
+    <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Mots-clefs
+    </h2>
+    <ul>
+      <li>
+        <strong>Français</strong> : Analogique, Résolution, Équations différentielles,
+        Numérique
+      </li>
+      <li>
+        <strong>Anglais</strong> : Analog computing, Differential Equations, Numeric
+      </li>
+    </ul>
+
+    <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Bibliographie
+      commentée
+    </h2>
+    <p>(À faire)</p>
+  </article>
+  <div class="divider mx-10">
+    <i class="fa-solid fa-minus text-3xl text-primary"></i>
+  </div>
+  <article id="maindiv" class="prose max-w-none lg:text-xl">
+    <h1>Travail réalisé</h1>
+  </article>
 
   <div id="svgg" class="m-10">
     <svg
@@ -1132,54 +1190,5 @@
 <style>
   #maindiv {
     margin: 0 10%;
-  }
-
-  .blur-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(
-        circle at 20% 20%,
-        rgba(56, 0, 0, 0.253),
-        transparent 60%
-      ),
-      radial-gradient(circle at 80% 40%, rgba(0, 14, 44, 0.3), transparent 60%),
-      radial-gradient(
-        circle at 50% 80%,
-        rgba(0, 87, 29, 0.267),
-        transparent 60%
-      );
-    filter: blur(80px);
-    z-index: -1;
-    overflow: hidden;
-  }
-
-  .pat-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    z-index: -2;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.17'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-
-  #svgg {
-    width: 100%;
-    height: fit-content;
-    overflow-x: scroll;
-    display: flex;
-    padding: 3em;
-    margin: 3em auto;
-    border-radius: 20px;
-    border: 3px solid rgba(117, 117, 117, 0.342);
-    background: rgba(37, 37, 37, 0.185);
-  }
-
-  #svgg > * {
-    min-width: 1000px;
-    margin: 0 auto;
   }
 </style>
