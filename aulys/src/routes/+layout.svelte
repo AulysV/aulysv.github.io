@@ -23,6 +23,8 @@
       showMessage = true;
     }, 5000);
   });
+
+  let isDrawerOpen = false;
 </script>
 
 {#if isLoading}
@@ -38,7 +40,12 @@
 {/if}
 
 <div class="drawer">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <input
+    id="my-drawer-2"
+    type="checkbox"
+    class="drawer-toggle"
+    bind:checked={isDrawerOpen}
+  />
   <div class="drawer-content flex flex-col items-center justify-center">
     {#key data.pathname}
       <div transition:slide>
@@ -59,16 +66,20 @@
 
     <ul class="menu bg-base-200 w-80 p-4 min-h-svh">
       <div class="flex justify-evenly">
-        <a class="btn btn-ghost text-xl" href="/"
-          ><i class="fas fa-home"></i> Accueil</a
+        <a
+          class="btn btn-ghost text-xl"
+          href="/"
+          on:click={() => (isDrawerOpen = false)}
         >
+          <i class="fas fa-home"></i> Accueil
+        </a>
         <label class="swap swap-rotate">
           <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" class="theme-controller" value="adwaita" />
+          <input type="checkbox" class="theme-controller" value="emerald" />
 
           <!-- sun icon -->
           <svg
-            class="swap-off h-7 w-7 fill-current"
+            class="swap-on h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -80,7 +91,7 @@
           <!-- moon icon -->
 
           <svg
-            class="swap-on h-7 w-7 fill-current"
+            class="swap-off h-7 w-7 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
@@ -90,48 +101,24 @@
           </svg>
         </label>
       </div>
-      <!-- <li>
-        <div class="flex w-52 flex-col gap-4 self-center my-5">
-          <div class="flex items-center gap-4">
-            <div class="skeleton h-16 w-16 shrink-0 rounded-full"></div>
-            <div class="flex flex-col gap-4">
-              <div class="skeleton h-4 w-20"></div>
-              <div class="skeleton h-4 w-28"></div>
-            </div>
-          </div>
-          <div class="skeleton h-32 w-full"></div>
-        </div>
-      </li> -->
-
       <li></li>
       <li>
-        <a href="https://biblio.aulysv.fr" target="_blank"
-          >Bibliothèque de notes <i class="fa-solid fa-up-right-from-square"
-          ></i></a
+        <a
+          href="https://biblio.aulysv.fr"
+          target="_blank"
+          on:click={() => (isDrawerOpen = false)}
+        >
+          Bibliothèque de notes <i class="fa-solid fa-up-right-from-square"></i>
+        </a>
+      </li>
+      <li>
+        <a href="/tipe" on:click={() => (isDrawerOpen = false)}>TIPE</a>
+      </li>
+      <li>
+        <a href="/countdown" on:click={() => (isDrawerOpen = false)}
+          >The Countdown</a
         >
       </li>
-      <!-- <li><a href="/reims">Reims</a></li> -->
-      <li>
-        <a href="/tipe">TIPE</a>
-      </li>
-
-      <li><a href="/countdown">The Countdown</a></li>
-
-      <!-- <li>
-        <a>Parent</a>
-        <ul>
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-          <li>
-            <a>Parent</a>
-            <ul>
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a>Item 3</a></li> -->
     </ul>
   </div>
 </div>
@@ -229,6 +216,18 @@ footer {
   footer {
     display: flex;
     justify-content: space-between;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(110, 110, 110, 0.158);
+    backdrop-filter: blur(80px); /* Add blur to the background */
+    border-top: 5px solid rgba(0, 0, 0, 0.4);
+  }
+
+  footer > * {
+    position: relative; /* Ensure content is not blurred */
+    z-index: 1;
   }
   .backdrop-blur {
     --backdrop-blur-color: #0000ff;
