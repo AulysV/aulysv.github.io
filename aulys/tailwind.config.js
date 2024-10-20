@@ -11,7 +11,11 @@ export default {
       body: ['"Open Sans"'],
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("daisyui"),
+    require("katex"),
+  ],
 
   daisyui: {
     themes: [
