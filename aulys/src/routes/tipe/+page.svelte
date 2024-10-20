@@ -38,10 +38,10 @@
   import diagram from "$lib/images/diagram.svg";
 </script>
 
-<div class="blur-bg"></div>
-<div class="pat-bg"></div>
+<div class="blur-bg w-screen"></div>
+<div class="pat-bg w-screen"></div>
 
-<div id="content" class="min-h-svh w-svw px-7 md:px-28 lg:px-32">
+<div id="content" class="w-screen">
   <h1 class="text-5xl font-bold mt-32 text-center">TIPE</h1>
   <p class="text-center">(Travail d'initiative personnelle encadré)</p>
   <div class="divider mx-10">
@@ -143,11 +143,13 @@
       retenus.
     </p>
 
+    <p>(Les boites sont scrollables horizontalement)</p>
+
     <div id="svgg" class="m-10">
       <img src={diagram} alt="Diagramme analytique du masse ressort" />
     </div>
 
-    <h6>Explication :</h6>
+    <h3>Explication :</h3>
     <p>
       On cherche à modéliser l'équation <code>ÿ + α·ẏ + β·y = e</code>. On a
       donc <code>ÿ = -α·ẏ -β·y + e</code>. Un sommateur permettra de calculer
@@ -173,39 +175,41 @@
     </p>
     <h3>Calculs :</h3>
 
-    <p>
-      On note <code>R'</code> les résistances de <code>1 MΩ</code>. On résonne
-      en potentiels.
-    </p>
+    <div id="calculs">
+      <p>
+        On note <code>R'</code> les résistances de <code>1 MΩ</code>. On résonne
+        en potentiels.
+      </p>
 
-    <p>La loi des nœuds en A donne :</p>
+      <p>La loi des nœuds en A donne :</p>
 
-    <p>{@html eq1}</p>
+      <p>{@html eq1}</p>
 
-    <p>On a donc l'équation suivante, qu'on note <code>(1)</code>:</p>
+      <p>On a donc l'équation suivante, qu'on note <code>(1)</code>:</p>
 
-    <p>{@html eq2}</p>
+      <p>{@html eq2}</p>
 
-    <p>La loi des nœuds en B donne :</p>
+      <p>La loi des nœuds en B donne :</p>
 
-    <p>{@html eq3}</p>
+      <p>{@html eq3}</p>
 
-    <p>On isole <code>Vx</code> et on substitue dans <code>(1)</code> :</p>
+      <p>On isole <code>Vx</code> et on substitue dans <code>(1)</code> :</p>
 
-    <p>{@html eq4}</p>
+      <p>{@html eq4}</p>
 
-    <p>
-      On considère que <code>R</code> négligeable devant <code>R'</code>, ce qui
-      donne sous forme normalisée :
-    </p>
+      <p>
+        On considère que <code>R</code> négligeable devant <code>R'</code>, ce
+        qui donne sous forme normalisée :
+      </p>
 
-    <p>{@html eq5}</p>
+      <p>{@html eq5}</p>
 
-    <p>
-      On prend <code>RC = 1</code> à une puissance de 10 près, ce qui donnera bien
-      ce que l'on veut. Il suffit de modifier les coeffs pour correspondre à l'équation
-      modélisée.
-    </p>
+      <p>
+        On prend <code>RC = 1</code> à une puissance de 10 près, ce qui donnera bien
+        ce que l'on veut. Il suffit de modifier les coeffs pour correspondre à l'équation
+        modélisée.
+      </p>
+    </div>
 
     <h2>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Premières
@@ -222,7 +226,7 @@
       afin de comprendre son fonctionnement :
     </p>
 
-    <img src={im} alt="Intégrateur mécanique" />
+    <img id="imgg" src={im} alt="Intégrateur mécanique" />
 
     <p>
       Un moteur permet de fournir une vitesse de rotation constante à la plaque
@@ -252,6 +256,7 @@
     <p>On obtient les résultats suivants :</p>
 
     <img
+      id="imgg"
       src={mec}
       alt="Résultats de l'intégrateur mécanique"
       class="w-[100%]"

@@ -26,6 +26,17 @@
     margin: 0 auto;
 }
 
+#calculs {
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    padding: 1em;
+    margin: 3em auto;
+    border-radius: 20px;
+    border: 3px solid rgba(117, 117, 117, 0.342);
+    background: rgba(37, 37, 37, 0.185);
+}
+
 .blur-bg {
     position: fixed;
     top: 0;
@@ -70,4 +81,15 @@ article h6 {
 
 article code {
     font-family: "Fira Code", "Roboto Slab", "Fira Sans", monospace;
+}
+
+article #imgg {
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    padding: 1em;
+    margin: 3em auto;
+    border-radius: 20px;
+    border: 3px solid rgba(117, 117, 117, 0.342);
+    background: rgba(37, 37, 37, 0.185);
 }
