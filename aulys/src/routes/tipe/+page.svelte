@@ -36,6 +36,8 @@
   import circuit from "$lib/images/circuit.svg";
   import mec from "$lib/images/mec.png";
   import diagram from "$lib/images/diagram.svg";
+  import graph from "$lib/images/graph.svg";
+  import graph2 from "$lib/images/graph2.svg";
 </script>
 
 <div class="blur-bg w-screen"></div>
@@ -211,6 +213,21 @@
       </p>
     </div>
 
+    <p>
+      Voici les résultats pour une entrée en échelon pour le pendule-plan puis
+      pour le circuit d'ordre 2. Les données du pendule-plan ont été prélevées
+      d'une vidéo par un logiciel de pointage.
+    </p>
+    <div id="imggg">
+      <img src={graph} alt="Graphe du pendule plan" />
+      <img src={graph2} alt="Graphe du circuit" />
+    </div>
+
+    <p>
+      (pas encore exporté les données du circuit, le deuxième graphe est un
+      graphe test)
+    </p>
+
     <h2>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Premières
       idées non abouties
@@ -289,5 +306,33 @@
 <style>
   #maindiv {
     margin: 0 10%;
+  }
+
+  article #imggg {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+  }
+
+  article #imggg > * {
+    width: 48%;
+    overflow-x: scroll;
+    padding: 1em;
+    border-radius: 20px;
+    border: 3px solid rgba(117, 117, 117, 0.342);
+    background: rgba(37, 37, 37, 0.185);
+  }
+
+  @media (max-width: 768px) {
+    article #imggg {
+      flex-direction: column;
+    }
+
+    article #imggg > * {
+      width: 100%;
+    }
   }
 </style>
