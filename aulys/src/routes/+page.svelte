@@ -54,8 +54,8 @@
       >, or the
       <a href="/tipe">TIPE page</a> (both in french 🥖)
     </p>
-    <h3>😨 Need to run a background ckeck on me?</h3>
-    <p>→ Check out my <a href="apropo">about page</a>.</p>
+    <!-- <h3>😨 Need to run a background ckeck on me?</h3>
+    <p>→ Check out my <a href="apropo">about page</a>.</p> -->
   </article>
 </div>
 
