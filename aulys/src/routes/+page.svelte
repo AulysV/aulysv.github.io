@@ -37,11 +37,11 @@
 
 <div id="fiskur" class="min-h-dvh bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
-    <h2>In 10 seconds?</h2>
+    <!-- <h2>In 10 seconds?</h2>
     <p>
       I'm more of a playful thinker, an explorer, a musician and a sportsman
       than a french student in engineering.
-    </p>
+    </p> -->
     <h2>Why are you here?</h2>
     <h3>📬️ To contact me</h3>
     <p>Mail : <a href="mailto:contact@aulysv.fr">contact@aulysv.fr</a></p>
