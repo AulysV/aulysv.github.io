@@ -1,6 +1,11 @@
 <script>
   import "@fortawesome/fontawesome-free/css/all.min.css";
   import aulys from "$lib/images/napopiano.jpg";
+  import nap from "$lib/images/nap.svg";
+  import { onMount } from "svelte";
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
   let greeting = "Bonjour";
 
   const currentTime = new Date();
@@ -9,6 +14,23 @@
   if (currentHour >= 18 || currentHour < 6) {
     greeting = "Bonsoir";
   }
+
+  onMount(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.from("#napoimg", {
+      y: 200,
+      opacity: 0,
+      duration: 1,
+      ease: "bounce.out",
+      scrollTrigger: {
+        trigger: "#napoimg",
+        start: "top 80%",
+        end: "top 50%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
 </script>
 
 <div class="blur-bg"></div>
@@ -35,7 +57,7 @@
   </div>
 </div>
 
-<div id="fiskur" class="min-h-dvh bg-base-200 w-dvw">
+<div id="fiskur" class="bg-base-200 w-dvw">
   <article id="maindiv" class="prose max-w-none lg:text-xl lg:p-36 p-10">
     <!-- <h2>In 10 seconds?</h2>
     <p>
@@ -54,8 +76,7 @@
       >, or the
       <a href="/tipe">TIPE page</a> (both in french 🥖)
     </p>
-    <!-- <h3>😨 Need to run a background ckeck on me?</h3>
-    <p>→ Check out my <a href="apropo">about page</a>.</p> -->
+    <img src={nap} id="napoimg" alt="Napoléours" class="mx-auto h-60" />
   </article>
 </div>
 
