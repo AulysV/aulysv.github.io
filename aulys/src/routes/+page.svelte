@@ -19,13 +19,13 @@
   onMount(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from("#napoimg", {
+    gsap.from("#Nut", {
       y: 200,
       opacity: 0,
       duration: 1,
       ease: "bounce.out",
       scrollTrigger: {
-        trigger: "#napoimg",
+        trigger: "#Nut",
         start: "top 80%",
         end: "top 50%",
         toggleActions: "play none none none",
@@ -78,7 +78,7 @@
       <a href="/tipe">TIPE page</a> (both in french 🥖)
     </p>
     <h2>Me in a nutshell:</h2>
-    <img src={nut} alt="Nut" class="h-60" />
+    <img src={nut} alt="Nut" id="Nut" class="h-60" />
     <!-- <img src={nap} id="napoimg" alt="Napoléours" class="mx-auto h-60" /> -->
   </article>
 </div>
