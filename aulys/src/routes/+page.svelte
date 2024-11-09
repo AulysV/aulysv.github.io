@@ -5,6 +5,7 @@
   import { onMount } from "svelte";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import nut from "$lib/images/nut.svg";
 
   let greeting = "Bonjour";
 
@@ -76,7 +77,9 @@
       >, or the
       <a href="/tipe">TIPE page</a> (both in french 🥖)
     </p>
-    <img src={nap} id="napoimg" alt="Napoléours" class="mx-auto h-60" />
+    <h2>Me in a nutshell:</h2>
+    <img src={nut} alt="Nut" class="h-60" />
+    <!-- <img src={nap} id="napoimg" alt="Napoléours" class="mx-auto h-60" /> -->
   </article>
 </div>
 
