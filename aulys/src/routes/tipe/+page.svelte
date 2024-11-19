@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+  import FileReader from "./FileReader.svelte";
+  import circuitimg from "$lib/images/output.svg";
+
   import "katex/dist/katex.min.css";
   import { onMount } from "svelte";
 
@@ -11,6 +14,7 @@
   let eq5 =
     "$$ \\frac{d^{2} V_{0}}{dt} +\\left(\\frac{1}{\\alpha ( RC)^{2}}\\right)\\frac{dV_{0}}{dt} +\\frac{V_{0}}{\\beta ( RC)^{2}} = \\frac{V_{i}}{( RC)^{2}} $$";
 
+  let ed = "$$ y^{(n)} +a_{n-1}y^{(n-1)} +\\ldots +a_{1}y' +a_{0}y =e $$";
   onMount(() => {
     renderMathInElement(document.body, {
       delimiters: [
@@ -333,6 +337,32 @@
     </p>
 
     <h2>
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Tentative
+      de systématisation
+    </h2>
+
+    <p>
+      Pour tenter de systématiser un peu le processus de création de circuits,
+      on propose par exemple de créer un circuit qui résout une équadiff
+      linéaire d'ordre n, de la forme :
+    </p>
+    <p>{@html ed}</p>
+    <p>Voici un script python qui dessine un circuit théorique.</p>
+    <FileReader />
+    <h3>Voici le résultat pour l'entrée "ordre = 5"</h3>
+    <img id="imgg" src={circuitimg} alt="Circuit pour une équation d'ordre 3" />
+    <h3>Problèmes :</h3>
+    <p>
+      Il s'agit seulement d'un circuit théorique : il ne prend pas <em
+        >(encore ?)</em
+      > en compte les problèmes d'amplification de la composante continue. Il est
+      en réalité impossible de mettre autant d'intégrateurs en série, surtout au-delà
+      d'un ordre supérieur à 4. Mais il illustre bien la nécessité d'un inverseur
+      à un retour sur deux, et le lien entre les coefficients de l'équation et les
+      résistances pondérées du circuit.
+    </p>
+
+    <h2>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Premières
       idées non abouties
     </h2>
@@ -438,5 +468,10 @@
     article #imggg > * {
       width: 100%;
     }
+  }
+
+  pre {
+    margin: 0;
+    padding: 0;
   }
 </style>

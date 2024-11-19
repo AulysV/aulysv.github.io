@@ -1,0 +1,116 @@
+# ED → Circuit
+
+# Importation des bib
+import sympy as sp
+import matplotlib.pyplot as plt
+import schemdraw
+import schemdraw.elements as elm
+
+
+def generate_circuit(order):
+    """
+    Génère un circuit électrique avec des amplificateurs opérationnels en fonction de l'ordre d'une équation différentielle.
+    
+    Paramètres:
+    - order : int : l'ordre de l'équation différentielle (doit être >= 2).
+    
+    Retourne:
+    - dessin Schemdraw contenant le circuit avec le nombre approprié d'intégrateurs.
+    """
+    if order < 2:
+        raise ValueError("L'ordre doit être au moins 2 pour générer un circuit avec des intégrateurs.")
+
+    schemdraw.theme('monokai')
+    
+    with schemdraw.Drawing() as d:
+        elm.style(elm.STYLE_IEC)
+        elm.Ground(lead=True)
+        elm.SourceV().label('Entrée').right()
+
+        def OpInv(R, ori):
+            """
+            Génère un amplificateur opérationnel inverseur avec une résistance R, en fonction de l'orientation donnée.
+            """
+            if ori == 'up':
+                elm.Resistor().up().label(r'R').length(1.5)
+                Oint = elm.Opamp(leads=True).up().anchor('in1')
+                elm.Ground().at(Oint.in2)
+                elm.Line().right(2).at(Oint.in1)
+                elm.Resistor().tox(Oint.out).label(R)
+                elm.Line().toy(Oint.out)
+
+            if ori == 'down':
+                elm.Resistor().down().label(r'R').length(1.5)
+                Oint = elm.Opamp(leads=True).down().anchor('in1')
+                elm.Ground().at(Oint.in2)
+                elm.Line().right(2).at(Oint.in1)
+                elm.Resistor().tox(Oint.out).label(R)
+                elm.Line().toy(Oint.out)
+
+            if ori == 'right':
+                elm.Resistor().right().label(r'R').length(1.5)
+                Oint = elm.Opamp(leads=True).right().anchor('in1')
+                elm.Ground().at(Oint.in2)
+                elm.Line().up(2).at(Oint.in1)
+                elm.Resistor().tox(Oint.out).label(R)
+                elm.Line().toy(Oint.out)
+
+            if ori == 'left':
+                elm.Resistor().left().label(r'R').length(1.5)
+                Oint = elm.Opamp(leads=True).left().anchor('in1')
+                Oint.flip()
+                elm.Ground().at(Oint.in2)
+                elm.Line().up(2).at(Oint.in1)
+                elm.Resistor().tox(Oint.out).label(R)
+                elm.Line().toy(Oint.out)
+
+        OpInv(r"R", 'right')
+
+        elm.Resistor().right().label(r'R')
+        Line = elm.Line().length(1.5)
+
+        ALIs = {} # Dictionnaire pour stocker les amplificateurs opérationnels
+        Pot = [r'$\alpha$R', r'$\beta$R', r'$\gamma$R', r'$\delta$R', r'$\epsilon$R', r'$\zeta$R', r'$\eta$R', r'$\theta$R', r'$\iota$R', r'$\kappa$R']
+        k = 2 # Variable pour ajuster la position des composants
+        for i in range(1, order+1): # Générer les amplificateurs opérationnels
+            ALIs[f'O{i}'] = elm.Opamp(leads=True).right().anchor('in1') # Stocker les amplificateurs opérationnels dans le dictionnaire
+
+            if i%2 == 1: # Si i est impair (intégrateur)
+                elm.Ground().at(ALIs[f'O{i}'].in2)
+                elm.Line().up(2).at(ALIs[f'O{i}'].in1)
+                elm.Capacitor().tox(ALIs[f'O{i}'].out).label(r'C')
+                elm.Line().toy(ALIs[f'O{i}'].out)
+
+                elm.Line().down().at(ALIs[f'O{i}'].out).length(k)
+                elm.Resistor().tox(Line.center).label(Pot[i-1])
+                elm.Line().toy(Line.center)
+
+                if i != order: # Si ce n'est pas le dernier amplificateur
+                    elm.Resistor().right().label(r'R').at(ALIs[f'O{i}'].out)
+                else:
+                    elm.Tag().right().label('Sortie').at(ALIs[f'O{i}'].out)
+            
+            if i%2 == 0 : # Si i est pair (intégrateur + inverseur)
+                elm.Ground().at(ALIs[f'O{i}'].in2)
+                elm.Line().up(2).at(ALIs[f'O{i}'].in1)
+                elm.Capacitor().tox(ALIs[f'O{i}'].out).label(r'C')
+                elm.Line().toy(ALIs[f'O{i}'].out)
+                elm.Line().down().at(ALIs[f'O{i}'].out).length(k)
+                elm.Line().left().length(1.5)
+                OpInv(r'R', 'left')
+                elm.Resistor().tox(Line.center).label(Pot[i-1])
+                elm.Line().toy(Line.center)
+
+                if i != order: # Si ce n'est pas le dernier amplificateur
+                    elm.Resistor().right().label(r'R').at(ALIs[f'O{i}'].out)
+                else:
+                    elm.Tag().right().label('Sortie').at(ALIs[f'O{i}'].out)
+
+            k += 3
+
+# Demander à l'utilisateur l'ordre de l'équation différentielle
+order = int(input("Entrez l'ordre de l'équation différentielle (>=2) : "))
+
+# Génération et affichage du circuit
+generate_circuit(order)
+plt.show()
