@@ -12,7 +12,7 @@
   let eq4 =
     "$$ V_{i} = R^{2} C^{2}\\frac{d^{2} V_{0}}{dt^{2}} +\\left[\\frac{RC}{\\alpha } +2RC\\frac{R}{R'}\\right]\\frac{dV_{0}}{dt} +\\left[\\frac{1}{\\beta } +\\frac{R}{R'}\\left(\\frac{1}{\\alpha } +\\frac{R}{R'}\\right)\\right] V_{0} $$";
   let eq5 =
-    "$$ \\frac{d^{2} V_{0}}{dt} +\\left(\\frac{1}{\\alpha ( RC)^{2}}\\right)\\frac{dV_{0}}{dt} +\\frac{V_{0}}{\\beta ( RC)^{2}} = \\frac{V_{i}}{( RC)^{2}} $$";
+    "$$ \\frac{d^{2} V_{0}}{dt} +\\left(\\frac{1}{\\alpha RC}\\right)\\frac{dV_{0}}{dt} +\\frac{V_{0}}{\\beta ( RC)^{2}} = \\frac{V_{i}}{( RC)^{2}} $$";
 
   let ed = "$$ y^{(n)} +a_{n-1}y^{(n-1)} +\\ldots +a_{1}y' +a_{0}y =e $$";
   onMount(() => {
