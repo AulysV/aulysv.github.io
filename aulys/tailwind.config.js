@@ -22,7 +22,7 @@ export default {
       {
         emerald: {
           ...require("daisyui/src/theming/themes")["emerald"],
-          primary: "#f0b90b",
+          primary: "#3584e4",
           secondary: " #f0b90b",
         },
       },
