@@ -22,16 +22,39 @@
   import img9 from "$lib/images/box/img (9).jpg";
   import img10 from "$lib/images/box/img (10).jpg";
 
-  import miab from "$lib/images/zik/miab.jpg";
-  import theriddle from "$lib/images/zik/theriddle.jpg";
-  import hotelcalifornia from "$lib/images/zik/hotelcalifornia.jpg";
-  import time from "$lib/images/zik/time.jpg";
-  import thapf from "$lib/images/zik/thapf.jpg";
-  import lgdp from "$lib/images/zik/lgdp.jpg";
-  import greenday from "$lib/images/zik/greenday.jpg";
-  import aceofbase from "$lib/images/zik/aceofbase.jpg";
+  import img1m from "$lib/images/box/min/img (1).jpg";
+  import img2m from "$lib/images/box/min/img (2).jpg";
+  import img3m from "$lib/images/box/min/img (3).jpg";
+  import img4m from "$lib/images/box/min/img (4).jpg";
+  import img5m from "$lib/images/box/min/img (5).jpg";
+  import img6m from "$lib/images/box/min/img (6).jpg";
+  import img7m from "$lib/images/box/min/img (7).jpg";
+  import img8m from "$lib/images/box/min/img (8).jpg";
+  import img9m from "$lib/images/box/min/img (9).jpg";
+  import img10m from "$lib/images/box/min/img (10).jpg";
+
+  import miab from "$lib/images/zik/min/miab.jpg";
+  import theriddle from "$lib/images/zik/min/theriddle.jpg";
+  import hotelcalifornia from "$lib/images/zik/min/hotelcalifornia.jpg";
+  import time from "$lib/images/zik/min/time.jpg";
+  import thapf from "$lib/images/zik/min/thapf.jpg";
+  import lgdp from "$lib/images/zik/min/lgdp.jpg";
+  import greenday from "$lib/images/zik/min/greenday.jpg";
+  import aceofbase from "$lib/images/zik/min/aceofbase.jpg";
 
   let imglist = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+  let imglistm = [
+    img1m,
+    img2m,
+    img3m,
+    img4m,
+    img5m,
+    img6m,
+    img7m,
+    img8m,
+    img9m,
+    img10m,
+  ];
 
   let greeting = "Bonjour";
 
@@ -212,14 +235,18 @@
   <div id="div4">
     <h3>🖼️ Some photos</h3>
     <box id="photos">
-      {#each imglist as img}
+      {#each imglist as img, index}
         <a
           href={img}
           data-pswp-width="800"
           data-pswp-height="600"
           target="_blank"
         >
-          <img src={img} alt="img" class="max-w-52 h-auto m-2 object-contain" />
+          <img
+            src={imglistm[index]}
+            alt="img"
+            class="max-w-52 h-auto m-2 object-contain"
+          />
         </a>
       {/each}
     </box>
