@@ -150,8 +150,8 @@
     <div>
       <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-2xl font-medium">This is Aulys VINAY's website.</p>
-      <a href="#div1"
-        ><button class="btn btn-primary">
+      <a id="okbutt" href="#div1"
+        ><button class="btn">
           <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button
         >
       </a>
@@ -242,15 +242,6 @@
     overflow: hidden;
   }
 
-  .pat-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: url("$lib/images/pattern.svg");
-  }
-
   #hero h1 {
     font-family: "Outfit", "Fira Sans", "Trebuchet MS", "Lucida Sans Unicode",
       "Lucida Grande", "Lucida Sans", Arial, sans-serif;
@@ -321,10 +312,6 @@
       margin: auto;
       display: flex;
     }
-
-    #div5 box {
-      margin: auto;
-    }
   }
 
   /* @media (min-width: 600px) and (max-width: 1150px) {
@@ -357,16 +344,13 @@
 
   @media (max-width: 600px) {
     #boiboites {
+      margin: 0.5em;
       display: flex;
       flex-direction: column;
     }
     #photos {
       margin: auto;
       display: flex;
-    }
-
-    #div5 box {
-      margin: auto;
     }
   }
 
@@ -404,5 +388,18 @@
   }
   #photos img {
     border-radius: 0.5em;
+  }
+
+  #okbutt button {
+    background: rgba(85, 85, 85, 0.411);
+    backdrop-filter: blur(80px);
+    border: none;
+  }
+
+  #okbutt :hover {
+    background: rgba(255, 255, 255, 0.411);
+    backdrop-filter: blur(80px);
+    border: none;
+    color: black;
   }
 </style>
