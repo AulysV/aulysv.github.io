@@ -110,6 +110,36 @@
       artist: "Ace of Base",
     },
   ];
+
+  import { writable } from "svelte/store";
+
+  const loadingProgress = writable(0);
+
+  onMount(() => {
+    const images = document.querySelectorAll("img"); // Sélectionne toutes les images de la page
+    const totalImages = images.length;
+    let loadedImages = 0;
+
+    if (totalImages === 0) {
+      loadingProgress.set(100); // Pas d'images à charger, on met la barre à 100%
+      return;
+    }
+
+    const updateProgress = () => {
+      loadedImages++;
+      loadingProgress.set((loadedImages / totalImages) * 100);
+    };
+
+    images.forEach((img) => {
+      if (img.complete) {
+        // Si l'image est déjà chargée
+        updateProgress();
+      } else {
+        img.addEventListener("load", updateProgress);
+        img.addEventListener("error", updateProgress); // Même si une image échoue, on compte
+      }
+    });
+  });
 </script>
 
 <div class="blur-bg"></div>
@@ -134,6 +164,18 @@
       </a>
     </div>
   </div>
+</div>
+
+<div class="loading-bar-container">
+  {#if $loadingProgress < 100}
+    <div class="loading-bar" style="width: {$loadingProgress}%;"></div>
+    <progress
+      class="progress progress-primary w-56"
+      value={$loadingProgress}
+      max="100"
+      id="loading-bar"
+    ></progress>
+  {/if}
 </div>
 
 <div id="boiboites">

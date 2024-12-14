@@ -9,14 +9,43 @@
   // import Loader from "$lib/components/Loader.svelte"; // Or whatever your component path is
   import { beforeNavigate, afterNavigate } from "$app/navigation";
 
-  let isLoading = false;
+  import { onMount, afterUpdate } from "svelte";
 
-  beforeNavigate(() => (isLoading = true));
-  afterNavigate(() => (isLoading = false));
-
-  import { afterUpdate } from "svelte";
-
+  let isLoading = true;
+  let progress = 0;
   let showMessage = false;
+
+  beforeNavigate(() => {
+    isLoading = true;
+    progress = 0;
+  });
+
+  afterNavigate(() => {
+    isLoading = false;
+  });
+
+  onMount(() => {
+    const images = document.images;
+    const totalImages = images.length;
+    let loadedImages = 0;
+
+    const updateProgress = () => {
+      loadedImages++;
+      progress = (loadedImages / totalImages) * 100;
+      if (loadedImages === totalImages) {
+        isLoading = false;
+      }
+    };
+
+    for (let i = 0; i < totalImages; i++) {
+      if (images[i].complete) {
+        updateProgress();
+      } else {
+        images[i].addEventListener("load", updateProgress);
+        images[i].addEventListener("error", updateProgress);
+      }
+    }
+  });
 
   afterUpdate(() => {
     setTimeout(() => {
@@ -29,12 +58,14 @@
 
 {#if isLoading}
   <div
-    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-200"
+    class="fixed top-0 left-0 w-full h-screen z-[99] flex flex-col justify-center bg-base-200"
   >
-    <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
-    ></span>
+    <progress
+      class="progress progress-primary w-56 self-center"
+      value={progress}
+      max="100"
+    ></progress>
     <p class="text-primary text-xl mt-10 ml-auto mr-auto">Chargementation...</p>
-
     <p class="mt-10 ml-auto mr-auto">(Recharger la page si necessaire)</p>
   </div>
 {/if}
