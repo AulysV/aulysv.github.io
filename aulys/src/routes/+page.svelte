@@ -133,36 +133,6 @@
       artist: "Ace of Base",
     },
   ];
-
-  import { writable } from "svelte/store";
-
-  const loadingProgress = writable(0);
-
-  onMount(() => {
-    const images = document.querySelectorAll("img"); // Sélectionne toutes les images de la page
-    const totalImages = images.length;
-    let loadedImages = 0;
-
-    if (totalImages === 0) {
-      loadingProgress.set(100); // Pas d'images à charger, on met la barre à 100%
-      return;
-    }
-
-    const updateProgress = () => {
-      loadedImages++;
-      loadingProgress.set((loadedImages / totalImages) * 100);
-    };
-
-    images.forEach((img) => {
-      if (img.complete) {
-        // Si l'image est déjà chargée
-        updateProgress();
-      } else {
-        img.addEventListener("load", updateProgress);
-        img.addEventListener("error", updateProgress); // Même si une image échoue, on compte
-      }
-    });
-  });
 </script>
 
 <div class="blur-bg"></div>
@@ -180,25 +150,13 @@
     <div>
       <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-2xl font-medium">This is Aulys VINAY's website.</p>
-      <a href="#fiskur"
+      <a href="#div1"
         ><button class="btn btn-primary">
           <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button
         >
       </a>
     </div>
   </div>
-</div>
-
-<div class="loading-bar-container">
-  {#if $loadingProgress < 100}
-    <div class="loading-bar" style="width: {$loadingProgress}%;"></div>
-    <progress
-      class="progress progress-primary w-56"
-      value={$loadingProgress}
-      max="100"
-      id="loading-bar"
-    ></progress>
-  {/if}
 </div>
 
 <div id="boiboites">
@@ -265,8 +223,6 @@
   </div>
 </div>
 
-<div id="fiskur" class="bg-base-200 w-dvw"></div>
-
 <style>
   .blur-bg {
     position: fixed;
@@ -293,12 +249,6 @@
     width: 100vw;
     height: 100%;
     background: url("$lib/images/pattern.svg");
-  }
-
-  #fiskur {
-    border: 3px solid rgba(0, 0, 0, 0.4);
-    background: rgba(43, 43, 43, 0.137);
-    backdrop-filter: blur(80px);
   }
 
   #hero h1 {
