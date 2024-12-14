@@ -10,39 +10,22 @@
   import { beforeNavigate, afterNavigate } from "$app/navigation";
   import { onMount } from "svelte";
 
+  import equation from "$lib/images/equation.svg";
+
   let isLoading = true;
-  let progress = 0;
-
-  beforeNavigate(() => {
-    isLoading = true;
-    progress = 0;
-  });
-
-  afterNavigate(() => {
-    isLoading = false;
-  });
 
   onMount(() => {
-    const images = document.images;
-    const totalImages = images.length;
-    let loadedImages = 0;
+    // Attendre que toutes les ressources de la page soient chargées
+    window.addEventListener("load", () => {
+      isLoading = false;
+    });
 
-    const updateProgress = () => {
-      loadedImages++;
-      progress = (loadedImages / totalImages) * 100;
-      if (loadedImages === totalImages) {
-        isLoading = false;
-      }
-    };
+    // Pour les pages dynamiques, tu peux utiliser une sécurité avec un timeout
+    const maxWaitTime = setTimeout(() => {
+      isLoading = false; // Si ça prend trop de temps, on cache quand même le loader
+    }, 5000);
 
-    for (let i = 0; i < totalImages; i++) {
-      if (images[i].complete) {
-        updateProgress();
-      } else {
-        images[i].addEventListener("load", updateProgress);
-        images[i].addEventListener("error", updateProgress);
-      }
-    }
+    return () => clearTimeout(maxWaitTime); // Nettoyer le timeout au démontage
   });
 
   let isDrawerOpen = false;
@@ -50,13 +33,20 @@
 
 {#if isLoading}
   <div
-    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-200"
+    id="loader"
+    class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center"
   >
-    <span class="loading loading-infinity self-center ml-auto mr-auto w-24 h-24"
+    <span class="loading loading-infinity self-center ml-auto mr-auto w-44 h-44"
     ></span>
-    <p class="text-primary text-xl mt-10 ml-auto mr-auto">Chargementation...</p>
 
-    <p class="mt-10 ml-auto mr-auto">(Recharger la page si necessaire)</p>
+    <p class="text-xl mt-10 ml-auto mr-auto">
+      Parametric equation of the lemniscate ∞ :
+    </p>
+    <img
+      src={equation}
+      alt="leminscate equation"
+      class="mt-10 max-w-md sm:max-w-sm lg:max-w-lg mx-auto"
+    />
   </div>
 {/if}
 
@@ -263,5 +253,10 @@ footer {
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.712);
     justify-content: center;
+  }
+
+  #loader {
+    background: rgba(26, 26, 26, 0.288);
+    backdrop-filter: blur(80px);
   }
 </style>
