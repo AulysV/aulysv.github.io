@@ -51,7 +51,13 @@
   <div class="divider mx-10">
     <i class="fa-solid fa-minus text-3xl text-primary"></i>
   </div>
-
+  <div id="attention">
+    <h2 class="mx-auto">Cette page est vraiment buggée.</h2>
+    <p>
+      Il est possible de rester coincé ici. Rechargez la page si c'est le cas.
+      C'est un peu une métaphore de la prépa.
+    </p>
+  </div>
   <div class="lg:text-xl w-max mr-auto ml-auto mt-32">
     <div
       id="countdownx"
@@ -109,3 +115,11 @@
     </div>
   </div>
 </div>
+
+<style>
+  #attention {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
