@@ -150,8 +150,8 @@
     <div>
       <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-2xl font-medium">This is Aulys VINAY's website.</p>
-      <a id="okbutt" href="#div1"
-        ><button class="btn">
+      <a href="#div1"
+        ><button class="btn butt">
           <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button
         >
       </a>
@@ -388,18 +388,5 @@
   }
   #photos img {
     border-radius: 0.5em;
-  }
-
-  #okbutt button {
-    background: rgba(85, 85, 85, 0.411);
-    backdrop-filter: blur(80px);
-    border: none;
-  }
-
-  #okbutt :hover {
-    background: rgba(255, 255, 255, 0.411);
-    backdrop-filter: blur(80px);
-    border: none;
-    color: black;
   }
 </style>

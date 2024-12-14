@@ -124,3 +124,21 @@ p {
   border: 3px solid rgba(117, 117, 117, 0.342);
   background: rgba(37, 37, 37, 0.185);
 }
+
+.butt {
+  background: rgba(85, 85, 85, 0.411);
+  backdrop-filter: blur(80px);
+  border: none;
+}
+
+.butt :hover {
+  background: rgba(255, 255, 255, 0.411);
+  backdrop-filter: blur(80px);
+  border: none;
+  color: black;
+}
+
+.dabg {
+  background: rgba(43, 43, 43, 0.137);
+  backdrop-filter: blur(80px);
+}
