@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import aulys from "$lib/images/aulys.png";
   import "../app.css";
   import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -8,20 +8,41 @@
 
   // import Loader from "$lib/components/Loader.svelte"; // Or whatever your component path is
   import { beforeNavigate, afterNavigate } from "$app/navigation";
+  import { onMount } from "svelte";
 
-  let isLoading = false;
+  let isLoading = true;
+  let progress = 0;
 
-  beforeNavigate(() => (isLoading = true));
-  afterNavigate(() => (isLoading = false));
+  beforeNavigate(() => {
+    isLoading = true;
+    progress = 0;
+  });
 
-  import { afterUpdate } from "svelte";
+  afterNavigate(() => {
+    isLoading = false;
+  });
 
-  let showMessage = false;
+  onMount(() => {
+    const images = document.images;
+    const totalImages = images.length;
+    let loadedImages = 0;
 
-  afterUpdate(() => {
-    setTimeout(() => {
-      showMessage = true;
-    }, 5000);
+    const updateProgress = () => {
+      loadedImages++;
+      progress = (loadedImages / totalImages) * 100;
+      if (loadedImages === totalImages) {
+        isLoading = false;
+      }
+    };
+
+    for (let i = 0; i < totalImages; i++) {
+      if (images[i].complete) {
+        updateProgress();
+      } else {
+        images[i].addEventListener("load", updateProgress);
+        images[i].addEventListener("error", updateProgress);
+      }
+    }
   });
 
   let isDrawerOpen = false;
@@ -31,7 +52,7 @@
   <div
     class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center bg-base-200"
   >
-    <span class="loading loading-ring self-center ml-auto mr-auto w-24 h-24"
+    <span class="loading loading-infinity self-center ml-auto mr-auto w-24 h-24"
     ></span>
     <p class="text-primary text-xl mt-10 ml-auto mr-auto">Chargementation...</p>
 
