@@ -44,11 +44,11 @@
   height: 100vh;
   background: radial-gradient(
       circle at 20% 20%,
-      rgba(56, 0, 0, 0.253),
+      rgba(77, 159, 168, 0.171),
       transparent 60%
     ),
-    radial-gradient(circle at 80% 40%, rgba(0, 14, 44, 0.3), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(0, 87, 29, 0.267), transparent 60%);
+    radial-gradient(circle at 80% 40%, rgba(18, 83, 129, 0.3), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(40, 83, 65, 0.185), transparent 60%);
   filter: blur(80px);
   z-index: -1;
   overflow: hidden;

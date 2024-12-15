@@ -3,7 +3,7 @@
   import "../app.css";
   import "@fortawesome/fontawesome-free/css/all.min.css";
   // import { fade } from "svelte/transition";
-  import { slide } from "svelte/transition";
+  import { blur } from "svelte/transition";
   export let data;
 
   // import Loader from "$lib/components/Loader.svelte"; // Or whatever your component path is
@@ -35,6 +35,7 @@
   <div
     id="loader"
     class="fixed top-0 left-0 w-svw h-screen z-[99] flex flex-col justify-center"
+    transition:blur
   >
     <span class="loading loading-infinity self-center ml-auto mr-auto w-44 h-44"
     ></span>
@@ -121,9 +122,7 @@
       </label>
     </div>
     {#key data.pathname}
-      <div transition:slide>
-        <slot />
-      </div>
+      <div transition:blur><slot /></div>
     {/key}
   </div>
   <div class="drawer-side z-[98]">

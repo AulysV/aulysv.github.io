@@ -224,24 +224,6 @@
 </div>
 
 <style>
-  .blur-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(
-        circle at 20% 20%,
-        rgba(68, 0, 68, 0.171),
-        transparent 60%
-      ),
-      radial-gradient(circle at 80% 40%, rgba(0, 41, 70, 0.3), transparent 60%),
-      radial-gradient(circle at 50% 80%, rgba(0, 102, 60, 0.3), transparent 60%);
-    filter: blur(80px);
-    z-index: -1;
-    overflow: hidden;
-  }
-
   #hero h1 {
     font-family: "Outfit", "Fira Sans", "Trebuchet MS", "Lucida Sans Unicode",
       "Lucida Grande", "Lucida Sans", Arial, sans-serif;
