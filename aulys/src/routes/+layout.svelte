@@ -87,13 +87,13 @@
           <!-- Navbar menu content here -->
           <li><a href="/tipe">TIPE</a></li>
           <!-- <li><a href="/countdown">Concours</a></li> -->
-          <li>
+          <!-- <li>
             <a
               href="http://biblio.aulysv.fr"
               target="_blank"
               rel="noopener noreferrer">Biblio</a
             >
-          </li>
+          </li> -->
         </ul>
       </div>
 

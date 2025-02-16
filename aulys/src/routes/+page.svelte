@@ -179,14 +179,17 @@
       >
     </p>
     <h3>→ No precise reason</h3>
-    <p>
+    <!-- <p>
       Take a look at <a
         class="link link-primary"
-        href="https://biblio.aulysv.fr/"
+        href="https://aulysv.fr"
         target="_blank"
         rel="noopener noreferrer">my notes library</a
       >, or the
       <a class="link link-primary" href="/tipe">TIPE page</a> (both in french 🥖)
+    </p> -->
+    <p>
+      Take a look at <a class="link link-primary" href="/tipe">TIPE page</a>!
     </p>
   </div>
 

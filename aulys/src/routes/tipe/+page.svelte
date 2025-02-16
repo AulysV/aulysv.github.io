@@ -60,6 +60,26 @@
   >
     <h2>Résolution analogique d'équations différentielles</h2>
 
+    <p>
+      Je trouvais amusant de faire une petite page pour montrer à quel point je
+      regrette d'avoir choisi ce sujet de TIPE sans fond. J'ai tenté de
+      structurer un peu le tohu-bohu qu'est mon TIPE, donc voici comment est
+      organisée la page :
+    </p>
+    <ul>
+      <li>MCOT</li>
+      <li>
+        <a href="#travail">Travail réalisé</a>
+        <ul>
+          <li><a href="#piste">Piste actuelle</a></li>
+          <li><a href="#tentative">Tentative de systématisation</a></li>
+          <li><a href="#pina">Premières idées non abouties</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <h1 class="mt-20">MCOT</h1>
+
     <h2>
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Ancrage
       au thème
@@ -230,8 +250,8 @@
     id="maindiv"
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
-    <h1>Travail réalisé</h1>
-    <h2>
+    <h1 id="travail">Travail réalisé</h1>
+    <h2 id="piste">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Piste
       actuelle
     </h2>
@@ -336,7 +356,7 @@
       graphe test)
     </p>
 
-    <h2>
+    <h2 id="tentative">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Tentative
       de systématisation
     </h2>
@@ -362,7 +382,7 @@
       résistances pondérées du circuit.
     </p>
 
-    <h2>
+    <h2 id="pina">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Premières
       idées non abouties
     </h2>
