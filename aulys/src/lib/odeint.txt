@@ -1,0 +1,96 @@
+import numpy as np
+from scipy.integrate import odeint
+import matplotlib.pyplot as plt
+
+# Constantes
+
+R = 1000
+C = 10e-9
+alpha = 4
+beta = 1
+R_prime = 1000000
+
+RC = R * C
+
+# Coeffs de l'equadiff non simplifiée
+a2_1 = R**2 * C**2
+a1_1 = (RC / alpha) + 2 * RC * (R / R_prime)
+a0_1 = (1 / beta) + (R / R_prime) * ((1 / alpha) + (R / R_prime))
+
+# Coeff de l'equadiff pour R' >> R
+a2_2 = 1
+a1_2 = 1 / (alpha * (R * C))
+a0_2 = 1 / (beta * (R * C)**2)
+
+# Les deux ED
+
+def equations(y, t):
+    V0_1, dV0_1_dt, V0_2, dV0_2_dt = y
+
+    d2V0_1_dt2 = (1 / a2_1) * (Vi(t) - a1_1 * dV0_1_dt - a0_1 * V0_1)
+    d2V0_2_dt2 = ((Vi(t) * beta / ((R * C)**2 * beta)) - a1_2 * dV0_2_dt - a0_2 * V0_2)
+
+    return [dV0_1_dt, d2V0_1_dt2, dV0_2_dt, d2V0_2_dt2]
+
+# Second membre
+def Vi(t):
+    return 2 + t - t # t - t permet de calculer Vi à chaque t (moche)
+
+# Conditions initiales
+V0_1_0 = 0    # V0_1(t=0)
+dV0_1_0 = 0.0   # dV0_1/dt(t=0)
+V0_2_0 = 0   # V0_2(t=0)
+dV0_2_0 = 0.0   # dV0_2/dt(t=0)
+y0 = [V0_1_0, dV0_1_0, V0_2_0, dV0_2_0]
+
+# Temps
+t = np.linspace(0, 0.0010, 100000)
+
+solution = odeint(equations, y0, t)
+
+# Sinus : résolution à la min
+
+# Fonction de sortie sous la forme (Acos(wt)+Bsin(wt))exp(kt) + B
+def sinus_amorti(t, A, B, w, k, C):
+    return (A*np.cos(w*t) + B*np.sin(w*t))*np.exp(k*t) + C
+
+# D'après les calculs réalisés
+w = (1/RC)*np.sqrt(1/beta - 1/(4*alpha**2))
+C = lambda t: Vi(t)*beta
+k = -1/(2*alpha*RC)  # Coefficient d'amortissement
+A = lambda t: -Vi(t)*beta
+B = lambda t: (Vi(t)*beta*k)/w
+
+sinus_amorti_values = sinus_amorti(t, A(t), B(t), w, k, C(t))
+
+# Extraction des solutions
+V0_1 = solution[:, 0]  # Solution V0_1(t)
+V0_2 = solution[:, 2]  # Solution V0_2(t)
+
+
+
+# Plotation des courbes expérimentales
+
+import pandas as pd
+
+fichier = r"python/données/donneesfinal.csv"
+
+don = pd.read_csv(fichier, sep=';', decimal=',')
+T = np.array(don["Temps"])
+
+mes = [col for col in don.columns if "E" in col]
+E = {str(mes[i]): np.array(don[mes[i]]) for i in range(len(mes))}
+
+plt.plot(T+0.00001, E["E41"]) # Changer le nom de la courbe à tracer à la main (Syntaxe : EXYCZ : alpha = X, beta = Y, C = Z*10 nF)
+
+# Traçage des courbes
+plt.plot(t, sinus_amorti_values, label="Solution calculée à la main + ajustements", linestyle='-.')
+plt.plot(t, V0_1, label="Equation brute odeint")
+plt.plot(t, V0_2, label="R' >> R odeint", linestyle='--')
+plt.plot(t, Vi(t), label="Vi(t)", linestyle=':')
+plt.xlabel("Temps (s)")
+plt.ylabel("Voltage")
+plt.legend()
+plt.title("Résolution des deux équations différentielles")
+plt.grid()
+plt.show()

@@ -1,7 +1,13 @@
 <script lang="ts" src="https://www.jsdelivr.com/package/npm/pdfjs-dist">
   import FileReaderSyst from "./FileReaderSyst.svelte";
   import FileReaderTrac from "./FileReaderTrac.svelte";
+  import FileReaderComp from "./FileReaderComp.svelte";
+
   import circuitimg from "$lib/images/output.svg";
+
+  import sorties from "$lib/images/sorties.svg";
+  import comp from "$lib/images/comp.svg";
+  import superp from "$lib/images/super.svg";
 
   import circ1 from "$lib/images/circuitirl1.jpg";
   import circ2 from "$lib/images/circuitirl2.jpg";
@@ -120,12 +126,12 @@
       <li>
         <a href="#travail">Travail réalisé</a>
         <ul>
-          <li>Exposition du problème</li>
-          <li>Principe de la résolution analogique</li>
-          <li>Création du circuit</li>
-          <li>Exploitation des données</li>
-          <li>Comparaison avec le numérique</li>
-          <li>Conclusion</li>
+          <li><a href="#expos">Exposition du problème</a></li>
+          <li><a href="#principe">Principe de la résolution analogique</a></li>
+          <li><a href="#circuit">Création du circuit</a></li>
+          <li><a href="#exploitation">Exploitation des données</a></li>
+          <li><a href="#comparaison">Comparaison avec le numérique</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
         </ul>
       </li>
 
@@ -337,7 +343,7 @@
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
     <h1 id="travail" class="mt-14">Travail réalisé</h1>
-    <h2 id="Expositionproblème">
+    <h2 id="expos">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
       ></i>Exposition du problème
     </h2>
@@ -374,7 +380,7 @@
       considère l’impact écologique actuel du numérique.
     </p>
 
-    <h2 id="Résol">
+    <h2 id="principe">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Principe
       de la résolution analogique
     </h2>
@@ -423,7 +429,7 @@
       <code>-y</code> en sortie de l'intégrateur.
     </p>
 
-    <h2 id="Expositionproblème">
+    <h2 id="circuit">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Création
       du circuit
     </h2>
@@ -500,7 +506,7 @@
       <img src={circ2} alt="Image circuit 2" />
     </div>
 
-    <h2 id="Exploitation">
+    <h2 id="exploitation">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
       ></i>Exploitation des données
     </h2>
@@ -514,20 +520,57 @@
     <p>Je réalise un programme python qui les trace :</p>
     <FileReaderTrac />
 
-    <p>
-      Voici les résultats pour une entrée en échelon pour le pendule-plan puis
-      pour le circuit d'ordre 2. Les données du pendule-plan ont été prélevées
-      d'une vidéo par un logiciel de pointage.
-    </p>
-    <div id="imggg">
-      <img src={graph} alt="Graphe du pendule plan" />
-      <img src={graph2} alt="Graphe du circuit" />
-    </div>
+    <p>On obtient une liste de sorties :</p>
+
+    <img src={sorties} alt="Liste de sorties" id="imgg" />
+
+    <p>(Syntaxe : EXYCZ : alpha = X, beta = Y, C = Z*10 nF)</p>
 
     <p>
-      (pas encore exporté les données du circuit, le deuxième graphe est un
-      graphe test)
+      Voici les résultats pour une entrée en échelon pour le pendule-plan puis
+      pour le circuit d'ordre 2 (E81C3 je crois). Les données du pendule-plan
+      ont été prélevées d'une vidéo par un logiciel de pointage.
     </p>
+    <p>En superposant les deux courbes :</p>
+
+    <img src={superp} alt="Superposition" id="imgg" />
+
+    <p>
+      On voit que le pendule plan ne suit pas exactement l'allure d'un sinus
+      amorti, je pense parce que Tracker ne traque pas super bien, et parce que
+      la balle de ping-pong qui fait office de pendule est trop sensible aux
+      incertitudes à cause de sa masse faible.
+    </p>
+
+    <h2 id="comparaison">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Comparaison
+      avec le numérique
+    </h2>
+
+    <p>
+      Voici un circuit qui résout des équadiffs numériquement, avec Odeint. Je
+      trace également la sortie exacte, calculée précédemment sur un cahier.
+    </p>
+
+    <FileReaderComp />
+
+    <p>Sortie du programme :</p>
+
+    <img src={comp} alt="Sortie du programme" id="imgg" />
+
+    <p>
+      On voit bien que Odeint et la solution calculée à la main sont
+      indiscernables. Le circuit, lui, s'éloigne de la sortie attendue. La
+      valeur finale n'est pas toute à fait la même, certainement à cause de
+      l'incertitude sur Beta et Vi. Cependant, sans résoudre l'équation
+      différentielle, on a une bonne allure de la solution.
+    </p>
+
+    <h2 id="conclusion">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Conclusion
+    </h2>
+
+    <p>Il reste désormais à expliquer cet écart, et à le quantifier.</p>
 
     <h2 id="tentative">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Tentative
@@ -566,8 +609,15 @@
     </p>
     <h3>Intégrateur mécanique :</h3>
     <p>
-      Voici l'intégrateur mécanique auquel j'ai enlevé le support d'écriture
-      afin de comprendre son fonctionnement :
+      À la place d'utiliser des ALI pour intégrer successivement, on peut le
+      faire mécaniquement avec cet intégrateur mécanique. Il faut ensuite
+      assembler plusieurs de ces intégrateurs et ajouter des inverseurs et
+      sommateurs (assez simples normalement) pour créer un circuit mécanique qui
+      résout des équadiffs.
+    </p>
+    <p>
+      Voici une tentative d'intégration mécanique. J'ai enlevé le support
+      d'écriture afin de comprendre son fonctionnement :
     </p>
 
     <img id="imgg" src={im} alt="Intégrateur mécanique" />
@@ -638,7 +688,7 @@
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
     <h3>Références</h3>
-    <ol>
+    <ol class="mb-20">
       <li id="fn:10">
         Tides A Scientific History - David Edgar Cartwright <a
           href="#fnref:1"
