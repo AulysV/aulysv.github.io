@@ -33,10 +33,12 @@
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
   .mockup-code {
     overflow-x: scroll;
+    overflow-y: scroll;
     padding: 1em;
     border-radius: 20px;
     border: 3px solid rgba(117, 117, 117, 0.342);
     background: rgba(37, 37, 37, 0.185);
+    max-height: 70vh;
   }
   pre {
     margin: 0;
