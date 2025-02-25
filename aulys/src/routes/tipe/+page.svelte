@@ -319,22 +319,22 @@
         ce que l'on veut. Il suffit de modifier les coeffs pour correspondre à l'équation
         modélisée.
       </p>
+      <p>On résout classiquement {@html eq6}</p>
+      <p>Et on identifie :</p>
+      <p>{@html eq7}{@html eq8}{@html eq9}{@html eq10}{@html eq11}</p>
+      <p>
+        On a alors des paramètres réglables (α, β, C, R) pour différentes
+        grandeurs de la solution de l'équadiff. (k, w, A, B) : {@html eq12}
+      </p>
+      <p>On a deux problèmes ici :</p>
+      <ul>
+        <li>
+          Chaque paramètre (α, β, C, R) modifie plusieurs grandeurs (k, w, A,
+          B). Il faut résoudre un système de 4 équations, 4 inconnues.
+        </li>
+        <li>La valeur finale dépend de β</li>
+      </ul>
     </div>
-    <p>On résout classiquement {@html eq6}</p>
-    <p>Et on identifie :</p>
-    <p>{@html eq7}{@html eq8}{@html eq9}{@html eq10}{@html eq11}</p>
-    <p>
-      On a alors des paramètres réglables (α, β, C, R) pour différentes
-      grandeurs de la solution de l'équadiff. (k, w, A, B) : {@html eq12}
-    </p>
-    <p>On a deux problèmes ici :</p>
-    <ul>
-      <li>
-        Chaque paramètre (α, β, C, R) modifie plusieurs grandeurs (k, w, A, B).
-        Il faut résoudre un système de 4 équations, 4 inconnues.
-      </li>
-      <li>La valeur finale dépend de β</li>
-    </ul>
 
     <div id="imggg">
       <img src={circ1} alt="Image circuit 1" />
@@ -581,6 +581,10 @@
     border-radius: 20px;
     border: 3px solid rgba(117, 117, 117, 0.342);
     background: rgba(37, 37, 37, 0.185);
+  }
+
+  article img {
+    min-height: 40vh;
   }
 
   @media (max-width: 768px) {
