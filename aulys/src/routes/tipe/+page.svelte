@@ -115,12 +115,6 @@
   >
     <h2>Résolution analogique d'équations différentielles</h2>
 
-    <p>
-      Je trouvais amusant de faire une petite page pour montrer à quel point je
-      regrette d'avoir choisi ce sujet de TIPE sans fond. J'ai tenté de
-      structurer un peu le tohu-bohu qu'est mon TIPE, donc voici comment est
-      organisée la page :
-    </p>
     <ul>
       <li><a href="#mcot">MCOT</a></li>
       <li>
