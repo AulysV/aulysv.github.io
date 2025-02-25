@@ -132,15 +132,6 @@
       <!-- Sidebar content here -->
       <p class="text-xl mb-9">Pages présentes pour l'instant :</p>
       <li><a href="/tipe" class="text-xl">TIPE</a></li>
-      <!-- <li><a href="/countdown">Concours</a></li> -->
-      <li>
-        <a
-          href="http://biblio.aulysv.fr"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-xl">Biblio</a
-        >
-      </li>
     </ul>
   </div>
 </div>
