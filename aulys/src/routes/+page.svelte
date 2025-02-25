@@ -150,6 +150,10 @@
     <div>
       <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-2xl font-medium">This is Aulys VINAY's website.</p>
+      <p class="mb-4 lg:text-xl" id="description">
+        Un site d'expérimentations en dev web. Rien d'assez incroyable, pour
+        l'instant, à part la page TIPE 😎.
+      </p>
       <a href="#div1"
         ><button class="btn butt">
           <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button

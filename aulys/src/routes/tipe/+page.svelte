@@ -105,6 +105,7 @@
 <div id="content" class="w-screen">
   <h1 class="text-5xl font-bold mt-32 text-center">TIPE</h1>
   <p class="text-center">(Travail d'initiative personnelle encadré)</p>
+  <p class="text-center">(Oral de prépa)</p>
   <div class="divider mx-10">
     <i class="fa-solid fa-minus text-3xl text-primary"></i>
   </div>
@@ -115,6 +116,13 @@
   >
     <h2>Résolution analogique d'équations différentielles</h2>
 
+    <p>
+      En deux mots. Pour résoudre des équadiffs, Python marche bien. Mais dans
+      des petits systèmes (embarqués par exemple (genre robots)), un circuit
+      peut être beaucoup plus efficace ! C'est grâce à de tels circuits que
+      marchaient les premiers ordinateurs, qui pourraient d'ailleurs faire un
+      comeback grâce à leur efficacité très souhaitée en machine learning.
+    </p>
     <ul>
       <li><a href="#mcot">MCOT</a></li>
       <li>
@@ -148,173 +156,6 @@
     >
       <input type="checkbox" />
       <h2 id="mcot" class="collapse-title m-3">MCOT</h2>
-      <!-- <div class="collapse-content px-20">
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Ancrage
-          au thème
-        </h2>
-        <p>
-          Lorsqu'une solution analytique à un problème n'est pas accessible, on
-          peut recourir au numérique. Une autre méthode de résolution peut faire
-          gagner en temps de calcul ou en stabilité : la résolution analogique,
-          grâce à des circuits électriques. On convertit ainsi un problème de
-          résolution en un problème de modélisation.
-        </p>
-
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Motivations
-          du choix
-        </h2>
-        <p>
-          Travailler sur le calcul analogique me permet à la fois de comprendre
-          les similarités entre l'électronique et les autres domaines de la
-          physique, mais aussi de comprendre les raisons de la réapparition
-          récente du calcul analogique dans les dernières recherches
-          technologiques, comme en machine learning.
-        </p>
-
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Positionnement
-          thématique
-        </h2>
-        <ul>
-          <li><strong>Sciences industrielles</strong> : Électronique</li>
-          <li><strong>Physique</strong> : Micro-technologies</li>
-          <li>
-            <strong>Mathématiques</strong> : Analyse : Équations différentielles
-            (EDO)
-          </li>
-        </ul>
-
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Mots-clefs
-        </h2>
-        <ul>
-          <li>
-            <strong>Français</strong> : Analogique, Résolution, Équations
-            différentielles, Numérique
-          </li>
-          <li>
-            <strong>Anglais</strong> : Analog computing, Differential Equations,
-            Numeric
-          </li>
-        </ul>
-
-        <h2 id="bibcom">
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Bibliographie
-          commentée
-        </h2>
-        <p>
-          Avant la révolution numérique, les calculs physiques étaient réalisés
-          à la main et mécaniquement (anticythère), puis électroniquement depuis
-          la fin du XIXe (Lord Kelvin et l'intégration mécanique)<sup
-            id="fnref:1"><a href="#fn:1">[1]</a></sup
-          >. Le numérique a fini par les remplacer, pour deux raisons
-          principales : les ordinateurs numériques font des calculs exacts, et
-          peuvent être programmés pour réaliser une variété infinie de tâches,
-          contrairement à l’analogique qui consiste à réaliser des calculs en se
-          basant sur les propriétés fondamentales de la physique qui est régie
-          entre autres par des équations différentielles (loi des noeuds ou lois
-          de fonctionnement).
-        </p>
-        <p>
-          Cependant, l’analogique a plusieurs avantages qui les rendent
-          particulièrement performants dans les nouvelles technologies
-          actuelles. Les réseaux de neurones nécessitent une puissance de calcul
-          phénoménale, et les avantages de l'analogique tels que la capacité à
-          réaliser de nombreux calculs en parallèle, sans stockage, ont poussé
-          des entreprises comme Aspinity, qui se base sur les travaux initiés
-          par des chercheurs comme Hava T. Siegelmann<sup id="fnref:2"
-            ><a href="#fn:2">[2]</a></sup
-          >, à se servir de ces anciennes technologies pour les réutiliser dans
-          des applications modernes.
-        </p>
-        <p>
-          L'analogique, plus physiquement, possède aussi l'avantage de ne pas
-          échantillonner le réel et de réaliser les calculs en se basant sur les
-          propriétés de la physique, ce qui peut faire gagner en temps de
-          calculs et des facteurs de 1000 en termes de coût énergétique lors
-          d'applications usuelles<sup id="fnref:3"><a href="#fn:3">[3]</a></sup
-          >, surtout si l'on considère l’impact écologique actuel du numérique.
-        </p>
-        <p>
-          La résolution d'équations différentielles par méthodes analogiques est
-          dirigée par une méthode clef décrite dans <em>Analog Computing</em> de
-          Prof. Dr. Bernd Ulmann : la méthode d'intégrations successives<sup
-            id="fnref:4"><a href="#fn:4">[4]</a></sup
-          >. En partant d'une équation de la forme x'' + bx' + cx +d = f, on
-          isole x'' = f - bx' - cx - d. On peut alors intégrer successivement
-          pour obtenir les valeurs x' puis x. Les intégrations sont effectuées
-          par un amplificateur linéaire en configuration intégrateur, ou par un
-          intégrateur mécanique.
-        </p>
-        <p>
-          Les principales limites de cette méthode élémentaire sont la
-          difficulté de programmation, qui est élevée pour des résultats souvent
-          moins précis que la résolution numérique. En effet, les erreurs
-          peuvent se retrouver amplifiées, ce qui a longtemps été un frein à la
-          méthode analogique (frein qui a été révolutionnairement levé par Edwin
-          A. Goldberg dans les années 50)<sup id="fnref:5"
-            ><a href="#fn:5">[5]</a></sup
-          >.
-        </p>
-
-        <h3>Références</h3>
-        <ol>
-          <li id="fn:1">
-            Tides A Scientific History - David Edgar Cartwright <a
-              href="#fnref:1"
-              title="Retour au texte">↩</a
-            >
-          </li>
-          <li id="fn:2">
-            Neural Networks and Analog Computation: Beyond the Turing Limit -
-            Hava T. Siegelmann <a href="#fnref:2" title="Retour au texte">↩</a>
-          </li>
-          <li id="fn:3">
-            12 Future and chances, Analog Computing - Prof. Dr. Bernd Ulmann <a
-              href="#fnref:3"
-              title="Retour au texte">↩</a
-            >
-          </li>
-          <li id="fn:4">
-            7.2 Kelvin’s feedback technique, Analog Computing - Prof. Dr. Bernd
-            Ulmann <a href="#fnref:4" title="Retour au texte">↩</a>
-          </li>
-          <li id="fn:5">
-            4.1.2 Drift stabilization, Analog Computing - Prof. Dr. Bernd Ulmann <a
-              href="#fnref:5"
-              title="Retour au texte">↩</a
-            >
-          </li>
-        </ol>
-
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Problématique
-          retenue :
-        </h2>
-        <p>
-          Comment résoudre des équations différentielles grâce à des méthodes
-          analogiques et quelles en sont les limites ?
-        </p>
-
-        <h2>
-          <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Objectif
-        </h2>
-        <p>On propose donc :</p>
-        <ul>
-          <li>
-            De comprendre les principes de base du calcul analogique et de la
-            résolution d'équations différentielles, en résolvant des équations
-            différentielles ordinaires.
-          </li>
-          <li>
-            De comparer les résultats obtenus avec ceux de la résolution
-            numérique
-          </li>
-          <li>Proposer une systématisation de la résolution</li>
-        </ul>
-      </div> -->
       <div class="collapse-content px-20">
         <object data={Mcot} type="application/pdf" width="100%" height="600px">
           <p>
@@ -570,6 +411,7 @@
       Trouver des exemples où il est préférable d'avoir un circuit qui traite
       les données en direct, sans échantillonnage.
     </p>
+    <p>Analyse énergétique aussi ?</p>
 
     <h2 id="tentative">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Tentative
