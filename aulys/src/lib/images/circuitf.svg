@@ -1,11 +1,7 @@
 <svg width="625" height="202" viewBox="0 0 625 202" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M624.318 0H0V201.599H624.318V0Z" fill="#252525"/>
+<foreignObject x="-4" y="-4" width="632" height="210"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(2px);clip-path:url(#bgblur_0_57_3958_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="4" width="624" height="202" rx="8" fill="#2B2B2B" fill-opacity="0.44"/>
 <path d="M624.318 27.9092H0V28.4425H624.318V27.9092Z" fill="#B3B0B0"/>
 <path d="M624.318 172.633H0V173.167H624.318V172.633Z" fill="#B3B0B0"/>
-<path d="M624.318 25.6001H0V26.1334H624.318V25.6001Z" fill="#FF0000"/>
-<path d="M624.318 198.399H0V198.932H624.318V198.399Z" fill="#FF0000"/>
-<path d="M624.318 3.2002H0V3.73353H624.318V3.2002Z" fill="#0000FF"/>
-<path d="M624.318 176H0V176.534H624.318V176Z" fill="#0000FF"/>
 <path d="M624.318 94.9336H0V104.534H624.318V94.9336Z" fill="#1F1F1F"/>
 <path d="M11.3682 153.6C11.3682 151.838 12.7975 150.408 14.5602 150.408C16.3228 150.408 17.7522 151.836 17.7522 153.6" fill="#484848"/>
 <path d="M17.7507 153.6C17.7507 155.363 16.3214 156.792 14.5587 156.792C12.796 156.792 11.3667 155.364 11.3667 153.6" fill="#484848"/>
@@ -2937,4 +2933,7 @@
 <path d="M561.774 192L561.756 86.3999" stroke="#CC1414" stroke-width="2.13333" stroke-linecap="round"/>
 <path d="M552.176 192L552.158 86.3999" stroke="#00A527" stroke-width="4.26667" stroke-linecap="round"/>
 <path d="M552.176 192L552.158 86.3999" stroke="#25CC35" stroke-width="2.13333" stroke-linecap="round"/>
+<defs>
+<clipPath id="bgblur_0_57_3958_clip_path"><rect transform="translate(4 4)" width="624" height="202" rx="8"/>
+</clipPath></defs>
 </svg>
