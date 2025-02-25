@@ -4,6 +4,7 @@
   import FileReaderComp from "./FileReaderComp.svelte";
 
   import circuitimg from "$lib/images/output.svg";
+  import circuitf from "$lib/images/circuitf.svg";
 
   import sorties from "$lib/images/sorties.svg";
   import comp from "$lib/images/comp.svg";
@@ -335,6 +336,14 @@
         <li>La valeur finale dépend de β</li>
       </ul>
     </div>
+
+    <p>Voici le circuit. Entrée et sortie en A1 et A64.</p>
+
+    <div class="svgg">
+      <img src={circuitf} alt="Circuit" />
+    </div>
+
+    <p>En pratique les cables sont trop longs, donc ça fait une jungle.</p>
 
     <div id="imggg">
       <img src={circ1} alt="Image circuit 1" />
