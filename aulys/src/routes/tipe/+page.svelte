@@ -249,7 +249,7 @@
 
     <p>(Les boites sont scrollables horizontalement)</p>
 
-    <div id="svgg" class="m-10">
+    <div class="svgg m-10">
       <img src={diagram} alt="Diagramme analytique du masse ressort" />
     </div>
 
@@ -270,7 +270,7 @@
     </h2>
 
     <p>Ce diagramme peut être converti en circuit électrique :</p>
-    <div id="svgg" class="m-10">
+    <div class="svgg m-10">
       <img
         src={circuit}
         alt="Image de circuit électrique intégrateur"
@@ -357,7 +357,9 @@
 
     <p>On obtient une liste de sorties :</p>
 
-    <img src={sorties} alt="Liste de sorties" id="imgg" />
+    <div class="svgg">
+      <img src={sorties} alt="Liste de sorties" />
+    </div>
 
     <p>(Syntaxe : EXYCZ : alpha = X, beta = Y, C = Z*10 nF)</p>
 
@@ -368,7 +370,9 @@
     </p>
     <p>En superposant les deux courbes :</p>
 
-    <img src={superp} alt="Superposition" id="imgg" />
+    <div class="svgg">
+      <img src={superp} alt="Superposition" />
+    </div>
 
     <p>
       On voit que le pendule plan ne suit pas exactement l'allure d'un sinus
@@ -391,7 +395,9 @@
 
     <p>Sortie du programme :</p>
 
-    <img src={comp} alt="Sortie du programme" id="imgg" />
+    <div class="svgg">
+      <img src={comp} alt="Sortie du programme" />
+    </div>
 
     <p>
       On voit bien que Odeint et la solution calculée à la main sont
@@ -427,7 +433,10 @@
     <p>Voici un script python qui dessine un circuit théorique.</p>
     <FileReaderSyst />
     <h3>Voici le résultat pour l'entrée "ordre = 5"</h3>
-    <img id="imgg" src={circuitimg} alt="Circuit pour une équation d'ordre 3" />
+    <div class="svgg">
+      <img src={circuitimg} alt="Circuit pour une équation d'ordre 3" />
+    </div>
+
     <h3>Problèmes :</h3>
     <p>
       Il s'agit seulement d'un circuit théorique : il ne prend pas <em
@@ -460,8 +469,9 @@
       Voici une tentative d'intégration mécanique. J'ai enlevé le support
       d'écriture afin de comprendre son fonctionnement :
     </p>
-
-    <img id="imgg" src={im} alt="Intégrateur mécanique" />
+    <div class="svgg">
+      <img src={im} alt="Intégrateur mécanique" />
+    </div>
 
     <p>
       Un moteur permet de fournir une vitesse de rotation constante à la plaque
@@ -490,12 +500,13 @@
 
     <p>On obtient les résultats suivants :</p>
 
-    <img
-      id="imgg"
-      src={mec}
-      alt="Résultats de l'intégrateur mécanique"
-      class="w-[100%]"
-    />
+    <div class="svgg">
+      <img
+        src={mec}
+        alt="Résultats de l'intégrateur mécanique"
+        class="w-[100%]"
+      />
+    </div>
 
     <p>
       L'entrée est dessinée à la main en faisant translater le module
