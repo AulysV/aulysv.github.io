@@ -1,6 +1,12 @@
-<script lang="ts">
-  import FileReader from "./FileReader.svelte";
+<script lang="ts" src="https://www.jsdelivr.com/package/npm/pdfjs-dist">
+  import FileReaderSyst from "./FileReaderSyst.svelte";
+  import FileReaderTrac from "./FileReaderTrac.svelte";
   import circuitimg from "$lib/images/output.svg";
+
+  import circ1 from "$lib/images/circuitirl1.jpg";
+  import circ2 from "$lib/images/circuitirl2.jpg";
+
+  import Mcot from "$lib/Mcot_13238.pdf";
 
   import "katex/dist/katex.min.css";
   import { onMount } from "svelte";
@@ -15,6 +21,24 @@
     "$$ \\frac{d^{2} V_{0}}{dt} +\\left(\\frac{1}{\\alpha RC}\\right)\\frac{dV_{0}}{dt} +\\frac{V_{0}}{\\beta ( RC)^{2}} = \\frac{V_{i}}{( RC)^{2}} $$";
 
   let ed = "$$ y^{(n)} +a_{n-1}y^{(n-1)} +\\ldots +a_{1}y' +a_{0}y =e $$";
+
+  let eq6 =
+    "$$ V_{0}(t) = \\left( A \\cos(\\omega t) + B \\sin(\\omega t) \\right) e^{kt} + K $$";
+
+  let eq7 =
+    "$$ \\omega = \\frac{1}{RC} \\sqrt{\\frac{1}{\\beta} - \\frac{1}{4\\alpha^2}} $$";
+
+  let eq8 = "$$ k = -\\frac{1}{2\\alpha RC} $$";
+
+  let eq9 = "$$ A = -V_{i}(t) \\beta $$";
+
+  let eq10 = "$$ B = \\frac{V_{i}(t) \\beta k}{\\omega} $$";
+
+  let eq11 = "$$ K = V_{i}(t) \\beta $$";
+
+  let eq12 =
+    "$$ \\alpha \\rightarrow \\text{décroissance exponentielle}, \\quad \\beta \\rightarrow \\text{amplitude}, \\quad C \\rightarrow \\text{pseudo-période}, \\quad R \\rightarrow \\text{variable libre} $$";
+
   onMount(() => {
     renderMathInElement(document.body, {
       delimiters: [
@@ -42,6 +66,31 @@
   import diagram from "$lib/images/diagram.svg";
   import graph from "$lib/images/graph.svg";
   import graph2 from "$lib/images/graph2.svg";
+
+  // Ajoute un espace quand la vue se déplace avec un lien anchor bref moi j'ai compris
+
+  function smoothScroll(event) {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
+
+    const targetId = event.currentTarget.getAttribute("href").substring(1); // Récupère l'ID sans le "#"
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const navbarHeight = document.querySelector(".navbar")?.offsetHeight || 0; // Récupère la hauteur de la navbar
+      const offset = 20; // Espace supplémentaire après la navbar
+
+      window.scrollTo({
+        top: targetElement.offsetTop - navbarHeight - offset,
+        behavior: "smooth",
+      });
+    }
+  }
+
+  onMount(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", smoothScroll);
+    });
+  });
 </script>
 
 <div class="blur-bg w-screen"></div>
@@ -55,7 +104,7 @@
   </div>
 
   <article
-    id="maindiv"
+    id="intro"
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
     <h2>Résolution analogique d'équations différentielles</h2>
@@ -71,11 +120,17 @@
       <li>
         <a href="#travail">Travail réalisé</a>
         <ul>
-          <li><a href="#piste">Piste actuelle</a></li>
-          <li><a href="#tentative">Tentative de systématisation</a></li>
-          <li><a href="#pina">Premières idées non abouties</a></li>
+          <li>Exposition du problème</li>
+          <li>Principe de la résolution analogique</li>
+          <li>Création du circuit</li>
+          <li>Exploitation des données</li>
+          <li>Comparaison avec le numérique</li>
+          <li>Conclusion</li>
         </ul>
       </li>
+
+      <li><a href="#tentative">Tentative de systématisation</a></li>
+      <li><a href="#pina">Premières idées non abouties</a></li>
     </ul>
   </article>
 
@@ -84,7 +139,7 @@
   </div>
 
   <article
-    id="maindiv"
+    id="mcot"
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
     <div
@@ -92,8 +147,8 @@
       style="border: 3px solid rgba(117, 117, 117, 0.342);"
     >
       <input type="checkbox" />
-      <div class="collapse-title text-xl font-medium">MCOT</div>
-      <div class="collapse-content px-20">
+      <h2 id="mcot" class="collapse-title m-3">MCOT</h2>
+      <!-- <div class="collapse-content px-20">
         <h2>
           <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Ancrage
           au thème
@@ -145,7 +200,7 @@
           </li>
         </ul>
 
-        <h2>
+        <h2 id="bibcom">
           <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Bibliographie
           commentée
         </h2>
@@ -259,6 +314,20 @@
           </li>
           <li>Proposer une systématisation de la résolution</li>
         </ul>
+      </div> -->
+      <div class="collapse-content px-20">
+        <object data={Mcot} type="application/pdf" width="100%" height="600px">
+          <p>
+            Malheuresement, le PDF viewer n'est pas dispo sur votre
+            appareil/navigateur. Testé sous Firefox. Veuillez télécharger le PDF
+            : <a
+              href={Mcot}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-primary">Télécharger le PDF</a
+            >
+          </p>
+        </object>
       </div>
     </div>
   </article>
@@ -268,16 +337,63 @@
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
     <h1 id="travail" class="mt-14">Travail réalisé</h1>
-    <h2 id="piste">
-      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Piste
-      actuelle
+    <h2 id="Expositionproblème">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
+      ></i>Exposition du problème
     </h2>
 
     <p>
-      Grâce à la « Kelvin's feedback technique » que j'ai décrite dans la
-      bibliographie commentée, on peut résoudre la plupart des équations
-      différentielles linéaires par intégrations successives. On commence
-      traditionnellement par faire un masse−ressort amorti.
+      Avant la révolution numérique, les calculs physiques étaient réalisés à la
+      main et mécaniquement (anticythère), puis électroniquement depuis la fin
+      du XIXe (Lord Kelvin et l'intégration mécanique)<sup id="fnref:1"
+        ><a href="#fn:10">[1]</a></sup
+      >. Le numérique a fini par les remplacer, pour deux raisons principales :
+      les ordinateurs numériques font des calculs exacts, et peuvent être
+      programmés pour réaliser une variété infinie de tâches, contrairement à
+      l’analogique qui consiste à réaliser des calculs en se basant sur les
+      propriétés fondamentales de la physique qui est régie entre autres par des
+      équations différentielles (loi des noeuds ou lois de fonctionnement).
+    </p>
+    <p>
+      Cependant, l’analogique a plusieurs avantages qui les rendent
+      particulièrement performants dans les nouvelles technologies actuelles.
+      Les réseaux de neurones nécessitent une puissance de calcul phénoménale,
+      et les avantages de l'analogique tels que la capacité à réaliser de
+      nombreux calculs en parallèle, sans stockage, ont poussé des entreprises
+      comme Aspinity, qui se base sur les travaux initiés par des chercheurs
+      comme Hava T. Siegelmann<sup id="fnref:20"><a href="#fn:20">[2]</a></sup>,
+      à se servir de ces anciennes technologies pour les réutiliser dans des
+      applications modernes.
+    </p>
+    <p>
+      L'analogique, plus physiquement, possède aussi l'avantage de ne pas
+      échantillonner le réel et de réaliser les calculs en se basant sur les
+      propriétés de la physique, ce qui peut faire gagner en temps de calculs et
+      des facteurs de 1000 en termes de coût énergétique lors d'applications
+      usuelles<sup id="fnref:30"><a href="#fn:30">[3]</a></sup>, surtout si l'on
+      considère l’impact écologique actuel du numérique.
+    </p>
+
+    <h2 id="Résol">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Principe
+      de la résolution analogique
+    </h2>
+    <p>
+      La résolution d'équations différentielles par méthodes analogiques est
+      dirigée par une méthode clef décrite dans <em>Analog Computing</em> de
+      Prof. Dr. Bernd Ulmann : la méthode d'intégrations successives<sup
+        id="fnref:40"><a href="#fn:40">[4]</a></sup
+      >. En partant d'une équation de la forme x'' + bx' + cx +d = f, on isole
+      x'' = f - bx' - cx - d. On peut alors intégrer successivement pour obtenir
+      les valeurs x' puis x. Les intégrations sont effectuées par un
+      amplificateur linéaire en configuration intégrateur, ou par un intégrateur
+      mécanique.
+    </p>
+    <p>
+      Grâce à cette méthode, la « Kelvin's feedback technique », on peut
+      résoudre la plupart des équations différentielles linéaires par
+      intégrations successives. On commence traditionnellement par faire un
+      masse−ressort amorti.
     </p>
 
     <p>
@@ -307,6 +423,11 @@
       <code>-y</code> en sortie de l'intégrateur.
     </p>
 
+    <h2 id="Expositionproblème">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i>Création
+      du circuit
+    </h2>
+
     <p>Ce diagramme peut être converti en circuit électrique :</p>
     <div id="svgg" class="m-10">
       <img
@@ -317,8 +438,9 @@
     </div>
     <p>
       On utilise des ALI en format intégrateurs (avec des résistances en
-      parallèle). On remarque par ailleurs la nécessité d'avoir un inverseur
-      après l'entrée en faisant les calculs.
+      parallèle pour des problèmes d'amplification de la composante continue).
+      On remarque par ailleurs la nécessité d'avoir un inverseur après l'entrée
+      en faisant les calculs.
     </p>
     <h3>Calculs :</h3>
 
@@ -357,6 +479,40 @@
         modélisée.
       </p>
     </div>
+    <p>On résout classiquement {@html eq6}</p>
+    <p>Et on identifie :</p>
+    <p>{@html eq7}{@html eq8}{@html eq9}{@html eq10}{@html eq11}</p>
+    <p>
+      On a alors des paramètres réglables (α, β, C, R) pour différentes
+      grandeurs de la solution de l'équadiff. (k, w, A, B) : {@html eq12}
+    </p>
+    <p>On a deux problèmes ici :</p>
+    <ul>
+      <li>
+        Chaque paramètre (α, β, C, R) modifie plusieurs grandeurs (k, w, A, B).
+        Il faut résoudre un système de 4 équations, 4 inconnues.
+      </li>
+      <li>La valeur finale dépend de β</li>
+    </ul>
+
+    <div id="imggg">
+      <img src={circ1} alt="Image circuit 1" />
+      <img src={circ2} alt="Image circuit 2" />
+    </div>
+
+    <h2 id="Exploitation">
+      <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"
+      ></i>Exploitation des données
+    </h2>
+
+    <p>
+      Je réalise l'aquisition de plusieurs signaux, pour plusieurs valeurs de
+      alpha, beta, C (je préfère ne pas changer beta à cause de la modification
+      de la valeur finale...).
+    </p>
+
+    <p>Je réalise un programme python qui les trace :</p>
+    <FileReaderTrac />
 
     <p>
       Voici les résultats pour une entrée en échelon pour le pendule-plan puis
@@ -385,7 +541,7 @@
     </p>
     <p>{@html ed}</p>
     <p>Voici un script python qui dessine un circuit théorique.</p>
-    <FileReader />
+    <FileReaderSyst />
     <h3>Voici le résultat pour l'entrée "ordre = 5"</h3>
     <img id="imgg" src={circuitimg} alt="Circuit pour une équation d'ordre 3" />
     <h3>Problèmes :</h3>
@@ -472,10 +628,49 @@
       j'abandonne donc cette piste.
     </p>
   </article>
+
+  <div class="divider mx-10 my-10">
+    <i class="fa-solid fa-minus text-3xl text-primary"></i>
+  </div>
+
+  <article
+    id="refs"
+    class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
+  >
+    <h3>Références</h3>
+    <ol>
+      <li id="fn:10">
+        Tides A Scientific History - David Edgar Cartwright <a
+          href="#fnref:1"
+          title="Retour au texte">↩</a
+        >
+      </li>
+      <li id="fn:20">
+        Neural Networks and Analog Computation: Beyond the Turing Limit - Hava
+        T. Siegelmann <a href="#fnref:20" title="Retour au texte">↩</a>
+      </li>
+      <li id="fn:30">
+        12 Future and chances, Analog Computing - Prof. Dr. Bernd Ulmann <a
+          href="#fnref:30"
+          title="Retour au texte">↩</a
+        >
+      </li>
+      <li id="fn:40">
+        7.2 Kelvin’s feedback technique, Analog Computing - Prof. Dr. Bernd
+        Ulmann <a href="#fnref:40" title="Retour au texte">↩</a>
+      </li>
+      <li id="fn:50">
+        4.1.2 Drift stabilization, Analog Computing - Prof. Dr. Bernd Ulmann <a
+          href="#fnref:50"
+          title="Retour au texte">↩</a
+        >
+      </li>
+    </ol>
+  </article>
 </div>
 
 <style>
-  #maindiv {
+  article {
     margin: 0 10%;
   }
 

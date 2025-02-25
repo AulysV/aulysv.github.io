@@ -1,15 +1,23 @@
 <script lang="ts">
-  import hljs from "highlight.js";
-  import "highlight.js/styles/github-dark.css"; // Choisir un thème adapté
   import circuit from "$lib/circuit.txt?raw"; // Charger le fichier Python brut
   import { onMount } from "svelte";
 
   let formattedCode: any;
 
+  // Préparer le contenu à l'affichage
+  onMount(() => {
+    formattedCode = circuit;
+  });
+
+  //Highlith
+
+  import hljs from "highlight.js";
+  import "highlight.js/styles/github-dark.css"; // Choisir un thème adapté
+
   // Appliquer la coloration syntaxique après le rendu
   function highlightCode() {
     setTimeout(() => {
-      const codeBlock = document.querySelector("pre code");
+      const codeBlock = document.querySelectorAll("pre code")[1];
       if (codeBlock) {
         codeBlock.innerHTML = hljs.highlight(codeBlock.textContent, {
           language: "python",
@@ -18,9 +26,7 @@
     });
   }
 
-  // Préparer le contenu à l'affichage
   onMount(() => {
-    formattedCode = circuit;
     highlightCode();
   });
 </script>

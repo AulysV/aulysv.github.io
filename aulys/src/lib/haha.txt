@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+
+fichier = r"données/donneesfinal.csv"
+
+don = pd.read_csv(fichier, sep=';', decimal=',')
+
+T = np.array(don["Temps"])
+
+mes = [col for col in don.columns if "E" in col]
+
+E = {str(mes[i]): np.array(don[mes[i]]) for i in range(len(mes))}
+
+for key, values in E.items():
+    plt.plot(T, values, label=key)
+
+
+plt.xlabel('Temps')
+plt.ylabel('Mesures')
+plt.title('Courbes des mesures en fonction du temps')
+plt.legend()
+plt.show()
