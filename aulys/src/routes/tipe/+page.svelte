@@ -337,7 +337,10 @@
       </ul>
     </div>
 
-    <p>Voici le circuit. Entrée et sortie en A1 et A64.</p>
+    <p>
+      Voici le circuit. Entrée et sortie en A1 et A64. Il manque d'ailleurs les
+      alimentations des ALI sur ce circuit simplifié.
+    </p>
 
     <div class="svgg">
       <img src={circuitf} alt="Circuit" />
