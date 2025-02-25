@@ -571,6 +571,11 @@
     </h2>
 
     <p>Il reste désormais à expliquer cet écart, et à le quantifier.</p>
+    <p>Numérique > Analogique mais ...</p>
+    <p>
+      Trouver des exemples où il est préférable d'avoir un circuit qui traite
+      les données en direct, sans échantillonnage.
+    </p>
 
     <h2 id="tentative">
       <i class="fa-regular fa-circle-dot text-primary text-xl mr-6"></i> Tentative
