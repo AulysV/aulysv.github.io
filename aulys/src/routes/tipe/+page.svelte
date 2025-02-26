@@ -342,6 +342,12 @@
       alimentations des ALI sur ce circuit simplifié.
     </p>
 
+    <p>
+      Les deux ALI du milieu sont les intégrateurs. Les deux résistances en haut
+      à droite sont les résistance retour. On utilise des boites à décades en
+      pratique pour les faire varier.
+    </p>
+
     <div class="svgg">
       <img src={circuitf} alt="Circuit" />
     </div>
