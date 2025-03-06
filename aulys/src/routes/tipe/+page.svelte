@@ -14,6 +14,7 @@
   import circ2 from "$lib/images/circuitirl2.jpg";
 
   import Mcot from "$lib/Mcot_13238.pdf";
+  import TIPE from "$lib/TIPE.pdf";
 
   import "katex/dist/katex.min.css";
   import { onMount } from "svelte";
@@ -125,6 +126,7 @@
       comeback grâce à leur efficacité très souhaitée en machine learning.
     </p>
     <ul>
+      <li><a href="#TIPE">Slides</a></li>
       <li><a href="#mcot">MCOT</a></li>
       <li>
         <a href="#travail">Travail réalisé</a>
@@ -148,6 +150,33 @@
   </div>
 
   <article
+    id="TIPE"
+    class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
+  >
+    <div
+      class="collapse dabg mb-5"
+      style="border: 3px solid rgba(117, 117, 117, 0.342);"
+    >
+      <input type="checkbox" />
+      <h2 class="collapse-title m-3">Transparents</h2>
+      <div class="collapse-content px-20">
+        <object data={TIPE} type="application/pdf" width="100%" height="600px">
+          <p>
+            Malheuresement, le PDF viewer n'est pas dispo sur votre
+            appareil/navigateur. Testé sous Firefox. Veuillez télécharger le PDF
+            : <a
+              href={TIPE}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link-primary">Télécharger le PDF</a
+            >
+          </p>
+        </object>
+      </div>
+    </div>
+  </article>
+
+  <article
     id="mcot"
     class="prose max-w-none lg:text-xl lg:text-justify md:text-justify"
   >
@@ -156,7 +185,7 @@
       style="border: 3px solid rgba(117, 117, 117, 0.342);"
     >
       <input type="checkbox" />
-      <h2 id="mcot" class="collapse-title m-3">MCOT</h2>
+      <h2 class="collapse-title m-3">MCOT</h2>
       <div class="collapse-content px-20">
         <object data={Mcot} type="application/pdf" width="100%" height="600px">
           <p>
