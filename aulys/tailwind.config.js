@@ -21,8 +21,8 @@ export default {
     themes: [
       {
         adwaita: {
-          primary: "#f6d32d",
-          "primary-focus": "#e5a50a",
+          primary: "#007070",
+          "primary-focus": "#004040",
           "primary-content": "#101010",
           secondary: "#57e389",
           "secondary-focus": "#2ec27e",

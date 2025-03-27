@@ -155,7 +155,7 @@
         l'instant, à part la page TIPE 😎.
       </p>
       <a href="#div1"
-        ><button class="btn butt">
+        ><button class="btn hover:btn-primary hover:text-white">
           <i class="fa-solid fa-arrow-down text-ba"></i>Ok</button
         >
       </a>

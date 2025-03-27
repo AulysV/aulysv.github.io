@@ -126,22 +126,52 @@
       comeback grâce à leur efficacité très souhaitée en machine learning.
     </p>
     <ul>
-      <li><a href="#TIPE">Slides</a></li>
-      <li><a href="#mcot">MCOT</a></li>
+      <li><a class="link hover:link-primary" href="#TIPE">Slides</a></li>
+      <li><a class="link hover:link-primary" href="#mcot">MCOT</a></li>
       <li>
-        <a href="#travail">Travail réalisé</a>
+        <a class="link hover:link-primary" href="#travail">Travail réalisé</a>
         <ul>
-          <li><a href="#expos">Exposition du problème</a></li>
-          <li><a href="#principe">Principe de la résolution analogique</a></li>
-          <li><a href="#circuit">Création du circuit</a></li>
-          <li><a href="#exploitation">Exploitation des données</a></li>
-          <li><a href="#comparaison">Comparaison avec le numérique</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
+          <li>
+            <a class="link hover:link-primary" href="#expos"
+              >Exposition du problème</a
+            >
+          </li>
+          <li>
+            <a class="link hover:link-primary" href="#principe"
+              >Principe de la résolution analogique</a
+            >
+          </li>
+          <li>
+            <a class="link hover:link-primary" href="#circuit"
+              >Création du circuit</a
+            >
+          </li>
+          <li>
+            <a class="link hover:link-primary" href="#exploitation"
+              >Exploitation des données</a
+            >
+          </li>
+          <li>
+            <a class="link hover:link-primary" href="#comparaison"
+              >Comparaison avec le numérique</a
+            >
+          </li>
+          <li>
+            <a class="link hover:link-primary" href="#conclusion">Conclusion</a>
+          </li>
         </ul>
       </li>
 
-      <li><a href="#tentative">Tentative de systématisation</a></li>
-      <li><a href="#pina">Premières idées non abouties</a></li>
+      <li>
+        <a class="link hover:link-primary" href="#tentative"
+          >Tentative de systématisation</a
+        >
+      </li>
+      <li>
+        <a class="link hover:link-primary" href="#pina"
+          >Premières idées non abouties</a
+        >
+      </li>
     </ul>
   </article>
 
