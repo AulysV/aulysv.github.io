@@ -20,47 +20,6 @@ export default {
   daisyui: {
     themes: [
       {
-        emerald: {
-          ...require("daisyui/src/theming/themes")["emerald"],
-          primary: "#3584e4",
-          secondary: " #f0b90b",
-        },
-      },
-      "corporate",
-      {
-        gnome: {
-          primary: "#f6d32d",
-          "primary-focus": "#e5a50a",
-          "primary-content": "#241f31",
-          secondary: "#57e389",
-          "secondary-focus": "#2ec27e",
-          "secondary-content": "#241f31",
-          accent: "#62a0ea",
-          "accent-focus": "#3584e4",
-          "accent-content": "#241f31",
-          neutral: "#151515",
-          "neutral-focus": "#16181d",
-          "neutral-content": "#ffffff",
-          "base-100": "#241f31",
-          "base-200": "#3d3846",
-          "base-300": "#2c2639",
-          "base-content": "#ebecf0",
-          info: "#66c7ff",
-          success: "#87cf3a",
-          warning: "#e1d460",
-          error: "#ff6b6b",
-          "--rounded-box": "1rem",
-          "--rounded-btn": ".5rem",
-          "--rounded-badge": "1.9rem",
-          "--animation-btn": ".25s",
-          "--animation-input": ".2s",
-          "--btn-text-case": "uppercase",
-          "--navbar-padding": ".5rem",
-          "--border-btn": "1px",
-        },
-      },
-
-      {
         adwaita: {
           primary: "#f6d32d",
           "primary-focus": "#e5a50a",
