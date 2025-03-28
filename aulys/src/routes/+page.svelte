@@ -148,7 +148,7 @@
     />
 
     <div>
-      <h1 class="text-5xl lg:text-8xl font-bold">{greeting}</h1>
+      <h1 class="text-5xl lg:text-9xl font-bold">{greeting}</h1>
       <p class="py-6 lg:text-2xl font-medium">This is Aulys VINAY's website.</p>
       <p class="mb-4 lg:text-xl" id="description">
         Un site d'expérimentations en dev web. Rien d'assez incroyable, pour
@@ -234,6 +234,7 @@
   #hero h1 {
     font-family: "Outfit", "Fira Sans", "Trebuchet MS", "Lucida Sans Unicode",
       "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-size: 5em;
   }
 
   #boiboites div {
