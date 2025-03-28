@@ -689,4 +689,12 @@
     margin: 0;
     padding: 0;
   }
+
+  ul {
+    list-style: circle;
+    margin-left: 1em;
+  }
+  li {
+    margin-top: 0.7em;
+  }
 </style>
