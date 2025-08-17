@@ -21,6 +21,10 @@
   import img8 from "$lib/images/box/img (8).jpg";
   import img9 from "$lib/images/box/img (9).jpg";
   import img10 from "$lib/images/box/img (10).jpg";
+  import img11 from "$lib/images/box/img (11).jpg";
+  import img12 from "$lib/images/box/img (12).jpg";
+  import img13 from "$lib/images/box/img (13).jpg";
+  import img14 from "$lib/images/box/img (14).jpg";
 
   import img1m from "$lib/images/box/min/img (1).jpg";
   import img2m from "$lib/images/box/min/img (2).jpg";
@@ -32,17 +36,38 @@
   import img8m from "$lib/images/box/min/img (8).jpg";
   import img9m from "$lib/images/box/min/img (9).jpg";
   import img10m from "$lib/images/box/min/img (10).jpg";
+  import img11m from "$lib/images/box/min/img (11).jpg";
+  import img12m from "$lib/images/box/min/img (12).jpg";
+  import img13m from "$lib/images/box/min/img (13).jpg";
+  import img14m from "$lib/images/box/min/img (14).jpg";
 
-  import miab from "$lib/images/zik/min/miab.jpg";
-  import theriddle from "$lib/images/zik/min/theriddle.jpg";
-  import hotelcalifornia from "$lib/images/zik/min/hotelcalifornia.jpg";
-  import time from "$lib/images/zik/min/time.jpg";
-  import thapf from "$lib/images/zik/min/thapf.jpg";
-  import lgdp from "$lib/images/zik/min/lgdp.jpg";
-  import greenday from "$lib/images/zik/min/greenday.jpg";
-  import aceofbase from "$lib/images/zik/min/aceofbase.jpg";
+  import miab from "$lib/images/zik/min/miab-min.jpg";
+  import hbts from "$lib/images/zik/min/hbts-min.jpg";
+  import fff from "$lib/images/zik/min/fff-min.jpg";
+  import a from "$lib/images/zik/min/a-min.jpg";
+  import pom from "$lib/images/zik/min/pom-min.jpg";
+  import thapf from "$lib/images/zik/min/thapf-min.jpg";
+  import theriddle from "$lib/images/zik/min/theriddle-min.jpg";
+  import uvd from "$lib/images/zik/min/uvd-min.jpg";
+  import ww from "$lib/images/zik/min/ww-min.jpg";
+  import rty from "$lib/images/zik/min/rty-min.jpg";
 
-  let imglist = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
+  let imglist = [
+    img1,
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    img7,
+    img8,
+    img9,
+    img10,
+    img11,
+    img12,
+    img13,
+    img14,
+  ];
   let imglistm = [
     img1m,
     img2m,
@@ -54,6 +79,10 @@
     img8m,
     img9m,
     img10m,
+    img11m,
+    img12m,
+    img13m,
+    img14m,
   ];
 
   let greeting = "Bonjour";
@@ -93,6 +122,11 @@
 
   let musicList = [
     {
+      cover: hbts,
+      title: "Home By The Sea",
+      artist: "Genesis",
+    },
+    {
       cover: miab,
       title: "Message In A Bottle",
       artist: "The Police",
@@ -103,14 +137,19 @@
       artist: "Nik Kershaw",
     },
     {
-      cover: hotelcalifornia,
-      title: "Hotel California",
-      artist: "Eagles",
+      cover: fff,
+      title: "Flesh For Fantasy",
+      artist: "Billy Idol",
     },
     {
-      cover: time,
-      title: "Time",
-      artist: "Pink Floyd",
+      cover: a,
+      title: "L'Aventurier",
+      artist: "Indochine",
+    },
+    {
+      cover: pom,
+      title: "Peace Of Mind",
+      artist: "Boston",
     },
     {
       cover: thapf,
@@ -118,21 +157,61 @@
       artist: "Michael Nyman",
     },
     {
-      cover: lgdp,
-      title: "La Groupie Du Pianiste",
-      artist: "Michel Berger",
+      cover: uvd,
+      title: "Une vie d'amour",
+      artist: "Charles Aznavour",
     },
     {
-      cover: greenday,
-      title: "Boulevard of Broken Dreams",
-      artist: "Green Day",
+      cover: ww,
+      title: "White Wedding",
+      artist: "Billy Idol",
     },
     {
-      cover: aceofbase,
-      title: "The Sign",
-      artist: "Ace of Base",
+      cover: rty,
+      title: "Run To You",
+      artist: "Bryan Adams",
     },
   ];
+
+  // Skin
+
+  import * as skinview3d from "skinview3d";
+  import skin from "$lib/images/skin.png";
+
+  let skinViewer;
+
+  onMount(() => {
+    const canvas = document.getElementById("skin_container");
+    if (canvas instanceof HTMLCanvasElement) {
+      skinViewer = new skinview3d.SkinViewer({
+        canvas: canvas,
+        width: 400,
+        height: 400,
+        skin: skin,
+      });
+
+      // Unload(hide) the cape / elytra
+      skinViewer.loadCape(null);
+
+      // Set the background color
+      // skinViewer.background = 0xffffff00;
+
+      // Change camera FOV
+      skinViewer.fov = 60;
+
+      // Zoom out
+      skinViewer.zoom = 0.8;
+
+      // Rotate the player
+      skinViewer.autoRotate = true;
+
+      // Apply an animation
+      skinViewer.animation = new skinview3d.IdleAnimation();
+
+      // Set the speed of the animation
+      skinViewer.animation.speed = 1;
+    }
+  });
 </script>
 
 <div class="blur-bg"></div>
@@ -142,10 +221,18 @@
   <div
     class="hero-content flex-col lg:flex-row lg:max-w-5xl md:max-w-xl sm:max-w-md max-w-64"
   >
-    <img
+    <!-- <img
       src={aulys}
       class="mask mask-hexagon lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60"
-    />
+    /> -->
+
+    <div class="lg:max-w-xs mx-20 sm:max-w-52 mb-10 max-w-60">
+      <div
+        style="display: flex; justify-content: center; align-items: center; height: 100%;"
+      >
+        <canvas id="skin_container"></canvas>
+      </div>
+    </div>
 
     <div>
       <h1 class="text-5xl lg:text-9xl font-bold">{greeting}</h1>

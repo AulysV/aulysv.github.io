@@ -49,6 +49,7 @@
 		"pdfkit": "^0.14.0",
 		"photoswipe": "^5.4.4",
 		"showdown": "^2.1.0",
+		"skinview3d": "^3.4.1",
 		"svelte-fa": "^4.0.2",
 		"svelte-leaflet": "^0.2.0",
 		"three": "^0.132.2"
