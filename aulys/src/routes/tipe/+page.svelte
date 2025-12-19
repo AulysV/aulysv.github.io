@@ -14,7 +14,7 @@
   import circ2 from "$lib/images/circuitirl2.jpg";
 
   import Mcot from "$lib/Mcot_13238.pdf";
-  import TIPE from "$lib/TIPE.pdf";
+  import TIPE from "$lib/TIPE0.pdf";
 
   import "katex/dist/katex.min.css";
   import { onMount } from "svelte";
